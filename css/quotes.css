@@ -1,0 +1,120 @@
+.reviews__section {
+	/* padding: 4rem 1.5rem 1.5rem 1.5rem; */
+	padding-inline: 1.5rem;
+	margin-block: 4rem 1.5rem;
+	/* display: grid; */
+}
+
+.reviews-svg {
+	display: grid;
+}
+
+.review-taxi-logo {
+	justify-self: center;
+}
+
+.reviews-carousel-container {
+	height: 23rem;
+	position: relative;
+	padding-inline: 6rem;
+}
+
+.reviews-carousel {
+	height: 22rem;
+	position: relative;
+	width: 100%;
+	margin-top: 10rem;
+}
+
+.review {
+	cursor: pointer;
+	margin: 4em auto;
+	margin: 0 auto;
+	padding: 1rem;
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	opacity: 0;
+	transform: translate(calc(200% + 10rem), -50%) scale(0.6);
+	transition: transform 1.5s cubic-bezier(0.7, -0.3, 0.2, 1.3),
+		opacity 0.5s 0.6s ease-out;
+	width: 20em;
+}
+
+.review-image {
+	background-size: cover;
+	border-radius: 50%;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5) inset;
+	height: 7em;
+	position: absolute;
+	top: -7em;
+	left: calc(50% - 3.5rem);
+	width: 7em;
+}
+
+.review-text {
+	text-align: center;
+	font-size: var(--normal-font-size);
+	font-style: var(--secondary-font-size);
+}
+
+.review.previous-review {
+	opacity: 0.5;
+	transform: translate(-50%, -50%) scale(0.8);
+}
+
+.review.current-review {
+	cursor: default;
+	opacity: 1;
+	transform: translate(50%, -50%);
+}
+
+.review.next-review {
+	opacity: 0.5;
+	transform: translate(150%, -50%) scale(0.8);
+}
+
+.review.left-review {
+	transform: translate(calc(-200%), -50%) scale(0.6);
+}
+
+.reviews-carousel-pips {
+	position: absolute;
+	bottom: 0;
+	margin: auto;
+	width: 100%;
+}
+
+.list-pips {
+	text-align: center;
+	margin-left: 1.5rem;
+}
+.pip {
+	background: #888;
+	border-radius: 50%;
+	border: 2px solid #555;
+	cursor: pointer;
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+	margin: 0 0.2rem;
+	padding: 0rem;
+	transform: scale(0.5);
+	transition: all 0.8s cubic-bezier(0, 1, 0.3, 1);
+}
+
+.previous-pip,
+.next-pip {
+	background: #ccc;
+	transform: scale(0.6);
+}
+
+.current-pip {
+	background: #fff;
+	cursor: default;
+	transform: scale(0.7);
+}
+
+.pip:not(.current-pip):hover {
+	transform: scale(1);
+}

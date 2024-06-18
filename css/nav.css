@@ -1,0 +1,128 @@
+.is-visible {
+	background-color: rgba(0, 0, 0, 1);
+}
+
+.nav__bar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav__logo {
+	color: var(--body-color);
+	font-size: var(--h1-font-size);
+	font-weight: var(--font-bold);
+	text-shadow: 0px 2px 4px #000000;
+	margin-right: 0.1rem;
+}
+
+.nav__menu {
+	/* position: relative; */
+	color: var(--body-color);
+	font-weight: var(--font-semi-bold);
+	justify-content: center;
+	transition: right 1s;
+}
+
+.nav__list {
+	display: flex;
+	column-gap: 1rem;
+	align-items: center;
+}
+
+.nav__item {
+	color: var(--body-color);
+	font-family: var(--secondary-style);
+	margin-right: 0.3rem;
+	cursor: pointer;
+	transform: color 0.5s linear;
+}
+
+.nav__item:hover {
+	color: var(--first-color);
+}
+
+.nav__close {
+	position: absolute;
+	visibility: hidden;
+}
+
+.phone__icon {
+	visibility: hidden;
+}
+
+.nav__contact {
+	border-left: 1px solid var(--body-color);
+	letter-spacing: 3px;
+	padding-left: 0.8rem;
+	font-size: var(--h2-font-size);
+	font-weight: var(--font-bold);
+	color: var(--body-color);
+}
+
+.nav__toogle {
+	position: absolute;
+	visibility: hidden;
+}
+
+@media screen and (max-width: 860px) {
+	.nav__menu {
+		background-color: rgba(0, 0, 0, 0.7);
+		backdrop-filter: blur(24px);
+		-webkit-backdrop-filter: blur(24px);
+		position: fixed;
+		top: 0;
+		right: -100%;
+		width: 70%;
+		height: 100%;
+	}
+	.nav__list {
+		flex-direction: column;
+		padding-block: 5rem 2rem;
+		padding-inline: 5rem;
+		row-gap: 3rem;
+		align-items: start;
+		width: 70%;
+		height: 100%;
+	}
+
+	.nav__close {
+		visibility: visible;
+		top: 1rem;
+		right: 1.5rem;
+		font-size: var(--larger-font-size);
+		cursor: pointer;
+	}
+
+	.contact__container {
+		border-left: 0;
+		border-radius: 20px;
+		margin-right: 3rem;
+		background-color: var(--first-color);
+		color: var(--title-color);
+		padding: 0.3rem 0.8rem;
+		font-size: var(--normal-font-size);
+	}
+	.nav__contact {
+		border-left: 0;
+		color: var(--title-color);
+		font-size: var(--small-font-size);
+		letter-spacing: 1px;
+	}
+
+	.phone__icon {
+		visibility: visible;
+		font-size: var(--normal-font-size);
+		color: var(--title-color);
+	}
+
+	.nav__toogle {
+		visibility: visible;
+		top: 1rem;
+		right: 1.5rem;
+		font-size: var(--larger-font-size);
+		color: var(--body-color);
+		cursor: pointer;
+		transition: right 1s;
+	}
+}

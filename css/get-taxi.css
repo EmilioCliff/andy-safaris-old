@@ -1,0 +1,88 @@
+.car__container {
+	display: flex;
+	justify-content: center;
+	column-gap: 1rem;
+	align-items: end;
+}
+
+.car__container a {
+	padding: 1rem;
+	border-radius: 0.8rem;
+	transition: backgroundcolor 0.2s ease-in;
+}
+
+.car__container a:hover {
+	background-color: rgb(243, 243, 108);
+}
+
+.js-active {
+	background-color: rgb(243, 243, 108);
+}
+
+.car__container a svg {
+	margin: 0;
+	padding: 0;
+	width: 4rem;
+	height: 3rem;
+}
+
+.svg-text {
+	fill: #000000;
+	font-size: 2rem;
+	font-weight: var(--font-semi-bold);
+	font-family: var(--secondary-style);
+	letter-spacing: 0.01rem;
+}
+
+.mini-van {
+	font-size: var(--normal-font-size);
+}
+
+.vip-car {
+	font-size: 0.3rem;
+}
+
+.contact-form {
+	display: grid;
+	row-gap: 1.5rem;
+	margin-block: 1.5rem;
+}
+
+.input-container {
+	position: relative;
+}
+
+.input-icon {
+	position: absolute;
+	top: 0.6rem;
+	right: 1.5rem;
+	font-size: var(--large-font-size);
+	color: black;
+	opacity: 0.5;
+}
+
+.input-field {
+	width: 100%;
+	padding: 0.5rem 1rem;
+	font-size: var(--normal-font-size);
+}
+
+.input-field::placeholder {
+	color: #ccc;
+	transition: all 0.3s ease;
+}
+
+.input-field:focus::placeholder {
+	color: transparent;
+}
+
+.input-field:focus {
+	font-weight: var(--font-semi-bold);
+	border: 1px solid #000;
+}
+
+.get-taxi-button {
+	align-self: center;
+	border-radius: 30px;
+	padding: 1rem 4rem;
+}

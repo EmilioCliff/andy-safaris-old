@@ -1,0 +1,117 @@
+.footer {
+	position: relative;
+	margin-top: 10rem;
+	background-color: var(--title-color);
+	padding-inline: 1.5rem;
+	padding-block: 2rem 1rem;
+}
+
+.back-top {
+	position: absolute;
+	top: -5rem;
+	left: 50%;
+	font-size: var(--larger-font-size);
+	border-radius: 50%;
+	/* padding: 0.5rem; */
+	width: 3rem;
+	height: 3rem;
+	text-align: center;
+	background-color: #555;
+	color: var(--body-color);
+	cursor: pointer;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.back-top i {
+	font-weight: var(--font-bold);
+}
+.back-top div {
+	animation: slide-up 3s ease infinite;
+}
+
+@keyframes slide-up {
+	0% {
+		opacity: 0;
+		transform: translateY(0.8rem) scale(0.6);
+	}
+	50% {
+		opacity: 1;
+		transform: none;
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(-0.8rem) scale(0.6);
+	}
+}
+
+.footer_explore {
+	visibility: hidden;
+}
+/* @media screen and (max-width: 728px) { */
+.footer-content {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin-bottom: 2rem;
+}
+
+.footer-about-us {
+	font-size: var(--small-font-size);
+	color: var(--body-color);
+	opacity: 0.4;
+	width: 80%;
+	margin-bottom: 0.8rem;
+}
+/* } */
+
+.footer-title {
+	color: var(--first-color);
+	margin-bottom: 0.5rem;
+	font-size: var(--large-font-size);
+	text-align: start;
+}
+
+.footer-socials {
+	display: flex;
+	color: var(--first-color);
+	font-size: var(--large-font-size);
+	column-gap: 0.8rem;
+	cursor: pointer;
+}
+.footer-socials i {
+	transition: color 0.3s linear, transform 1s ease;
+}
+
+.footer-socials i:hover {
+	color: rgb(243, 223, 159);
+	transform: translateY(-0.5rem);
+}
+
+.footer-address {
+	font-size: var(--small-font-size);
+	color: var(--body-color);
+	opacity: 0.4;
+	margin-bottom: 1.4rem;
+}
+
+.footer-contacts {
+	font-size: var(--normal-font-size);
+	color: var(--body-color);
+}
+
+.footer-contacts i {
+	color: var(--first-color);
+	margin-right: 1rem;
+	font-size: var(--large-font-size);
+}
+
+.footer_rights {
+	border-top: 1px solid white;
+	padding-top: 2rem;
+	font-size: var(--small-font-size);
+	color: var(--body-color);
+	opacity: 0.6;
+}
+
+.footer_rights span {
+	color: var(--first-color);
+}
