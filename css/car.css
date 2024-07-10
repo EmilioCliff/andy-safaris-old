@@ -1,0 +1,285 @@
+.car-hire-header-bg {
+	height: 70vh;
+	overflow: hidden;
+	color: var(--subtitle-color);
+	position: relative;
+}
+
+.car-hire-header-bg::after {
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),
+		url(../images/carYard1.jpeg) no-repeat center;
+	background-size: cover;
+	content: "";
+	opacity: 1;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -2;
+	/* animation: fade-slide-down 2s 0.5s cubic-bezier(0, 0.5, 0, 1) forwards; */
+}
+
+.car-hire-header-bg p {
+	text-align: center;
+	width: 70%;
+	position: absolute;
+	top: 75%;
+	left: 50%;
+	font-size: var(--larger-font-size);
+	font-weight: var(--font-semi-bold);
+}
+/* .car-hire-intro {
+	display: grid;
+	margin-block: 3rem 2rem;
+	opacity: 0;
+	animation: slide-in 2s 0.5s cubic-bezier(0, 0.5, 0, 1) forwards;
+	padding-inline: 1.5rem;
+} */
+
+.car-name {
+	font-family: var(--secondary-style);
+	font-weight: var(--font-semi-bold);
+	margin-bottom: 1rem;
+	font-size: var(--larger-font-size);
+}
+
+/* .car-details {
+	display: grid;
+	row-gap: 4rem;
+} */
+
+.car-pictures {
+	row-gap: 2rem;
+	position: relative;
+}
+
+.car-image {
+	width: 100%;
+	/* height: 21.5rem; */
+	object-position: center;
+	object-fit: cover;
+}
+
+.car-slider {
+	/* position: relative; */
+	display: flex;
+	/* justify-content: space-between; */
+	overflow-x: auto;
+}
+
+.car-slider::-webkit-scrollbar {
+	display: none;
+}
+
+.slider-left,
+.slider-right {
+	position: absolute;
+	color: white;
+	font-weight: var(--font-semi-bold);
+	height: 8rem;
+	width: 1.5rem;
+	background-color: #333;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: var(--large-font-size);
+	cursor: pointer;
+	/* z-index: 2; */
+}
+
+.slider-left:hover,
+.slider-right:hover {
+	background-color: #7a7474;
+}
+
+.slider-left {
+	display: none;
+	left: 0;
+}
+
+.slider-right {
+	right: 0;
+}
+
+.car-carousel {
+	display: flex;
+	column-gap: 0.5rem;
+	height: 8rem;
+}
+
+.car-carousel-item {
+	object-fit: cover;
+	/* width: 10rem; */
+}
+
+.car-carousel img {
+	cursor: pointer;
+}
+
+.slider-scroll-bar {
+	margin-top: -1.5rem;
+	height: 24px;
+	width: 100%;
+	/* background-color: red; */
+	display: flex;
+	align-items: center;
+}
+
+.slider-scroll-bar-track {
+	height: 2px;
+	width: 100%;
+	background-color: #ccc;
+	position: relative;
+	border-radius: 4px;
+}
+
+.slider-scroll-bar-track:hover .slider-scroll-bar-thumb {
+	height: 4px;
+}
+
+.slider-scroll-bar-thumb {
+	position: absolute;
+	height: 100%;
+	width: 50%;
+	background-color: #000;
+	border-radius: inherit;
+	/* cursor: grab; */
+}
+
+.slider-scroll-bar .slider-scroll-bar-thumb:active {
+	/* cursor: grabbing; */
+	height: 6px;
+	top: -2px;
+}
+
+.slider-scroll-bar-thumb::after {
+	content: "";
+	position: absolute;
+	top: -8px;
+	bottom: -8px;
+	left: 0;
+	right: 0;
+}
+
+.car-offered-with p {
+	font-size: var(--large-font-size);
+	margin-bottom: 0.5rem;
+}
+
+.car-des-list li {
+	font-size: var(--h3-font-size);
+}
+
+.car-icon-cont {
+	margin-right: 1rem;
+	margin-bottom: 1rem;
+	display: inline-block;
+	text-align: center;
+	border-radius: 50%;
+	padding: 0.25rem 0.5rem;
+	box-shadow: 2px 2px 30px hsla(22, 100%, 8%, 0.08);
+}
+.car-des-list li i {
+	color: var(--subtitle-color);
+	font-weight: var(--font-bold);
+}
+
+/* .car-details-pas {
+	row-gap: 2rem;
+} */
+
+.car-details-visual {
+	display: flex;
+	justify-content: space-around;
+}
+
+/* .car-detail-visual {
+	display: grid;
+	row-gap: 1rem;
+	text-align: center;
+} */
+
+/* .car-detail-visual p {
+	font-size: var(--h2-font-size);
+	font-weight: var(--font-semi-bold);
+	opacity: 0.5;
+} */
+
+/* .car-detail-visual-cont {
+	font-size: var(--larger-font-size);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem;
+	border: 1px solid black;
+	margin: 0 auto;
+	border-radius: 50%;
+	background-color: var(--subtitle-color);
+} */
+
+.break_down {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.break_down p:nth-child(1) {
+	text-transform: uppercase;
+	opacity: 0.4;
+	font-weight: var(--font-semi-bold);
+}
+
+/* .breakdown-list hr {
+	margin-block: 1rem;
+} */
+
+.car-hire-book-now {
+	margin-top: 1.5rem;
+	text-align: center;
+	border-radius: 2rem;
+	cursor: pointer;
+}
+
+/* .car-hire-rates {
+	margin-block: 5rem 2rem;
+	background-color: var(--title-color);
+	padding: 2rem 1.5rem;
+} */
+
+.car-rates-title {
+	color: var(--body-color);
+}
+
+/* .tables-car-container {
+	row-gap: 2rem;
+}
+
+.car-rate-cont p {
+	text-align: center;
+	text-decoration: underline;
+	margin-bottom: 1rem;
+	color: var(--subtitle-color);
+	font-size: var(--h2-font-size);
+	width: 80%;
+}
+
+.car-rate-table thead tr th {
+	border-block: 1px solid white;
+	color: var(--body-color);
+	padding: 4px;
+	text-align: center;
+}
+
+.car-rate-table tbody tr td {
+	color: var(--body-color);
+	padding-right: 0.5rem;
+	border-bottom: 1px solid white;
+	text-align: center;
+	vertical-align: text-top;
+	padding-block: 0.6rem;
+} */
+
+/* .car-rate-table {
+	overflow-x: auto;
+} */

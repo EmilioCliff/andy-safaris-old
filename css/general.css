@@ -80,6 +80,20 @@ h4 {
 	font-weight: var(--font-medium);
 }
 
+.main-container {
+	max-width: 1440px;
+	width: 100%;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	margin: 0 auto;
+	overflow-x: hidden;
+}
+
+.header-container {
+	max-width: 1440px;
+	width: 100%;
+	margin: 0 auto;
+}
+
 .section {
 	padding-block: 5rem 2rem;
 }
@@ -123,8 +137,17 @@ h4 {
 	background-color: var(--title-color);
 }
 
+.grid {
+	display: grid;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
 /* ================ BREAKPOINTS =================== */
-@media screen and (min-width: 730px) and (max-width: 830px) {
+@media screen and (min-width: 729px) and (max-width: 830px) {
 	.service-content {
 		display: grid;
 		position: absolute;
@@ -209,6 +232,494 @@ h4 {
 		padding: 2rem 1rem;
 		box-shadow: 6px 10px 20px rgba(0, 0, 0, 0.3);
 		background-color: var(--first-color);
+	}
+
+	.safari-intro {
+		margin-block: 4rem 1rem;
+		display: grid;
+		opacity: 1;
+		padding-inline: 3rem;
+		/* animation: slide-in 2s 0.5s cubic-bezier(0, 0.5, 0, 1) forwards; */
+	}
+
+	.safari-section-sub {
+		margin-block: 0.25rem 0.8rem;
+		font-size: var(--h1-font-size);
+	}
+
+	.safari-description {
+		font-weight: var(--font-semi-bold);
+		font-size: var(--h2-font-size);
+		text-align: center;
+	}
+
+	.safaris-grid-section {
+		margin-block: 4rem 1rem;
+		padding-inline: 3rem;
+	}
+
+	.days-selection {
+		margin-bottom: 2.5rem;
+		text-align: center;
+		font-family: var(--secondary-style);
+		font-weight: var(--font-medium);
+		font-size: var(--h2-font-size);
+	}
+
+	.day-number {
+		margin-top: 1rem;
+		font-size: var(--h2-font-size);
+	}
+
+	.show-all {
+		width: 9rem;
+		margin: 0 auto;
+		margin-block: 7rem 2rem;
+		cursor: pointer;
+	}
+
+	.safaris-grid {
+		display: grid;
+		margin-block: 2rem 1rem;
+		row-gap: 2.5rem;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 1.5rem;
+	}
+
+	.safari-card-title {
+		font-size: var(--h2-font-size);
+		margin-bottom: 0.8rem;
+		text-transform: uppercase;
+	}
+
+	.last-two-words::before {
+		content: "";
+	}
+
+	.safari-card-description {
+		text-align: start;
+		padding-inline: 0.5rem;
+		opacity: 0.6;
+		font-size: var(--small-font-size);
+	}
+
+	.safari-learn-more {
+		width: 60%;
+		margin: 0 auto;
+		margin-block: 0.8rem 01rem;
+		cursor: pointer;
+	}
+
+	.section-questions {
+		margin-block: 4rem 1rem;
+		padding-inline: 3rem;
+		display: grid;
+	}
+
+	.question {
+		padding: 1.5rem;
+		display: grid;
+		row-gap: 2rem;
+		box-shadow: 2px 8px 30px hsla(22, 100%, 8%, 0.1);
+	}
+
+	.safari-option {
+		text-align: center;
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		box-shadow: 0 8px 24px hsla(22, 100%, 8%, 0.2);
+	}
+
+	.service-nairobi-bg p,
+	.service-header-bg p {
+		font-size: 1.8rem;
+	}
+
+	.safari-num-intro {
+		margin-block: 3rem 1rem;
+		padding-inline: 2.5rem;
+	}
+
+	.safari-day-breakdown {
+		margin-block: 3.5rem 2rem;
+		padding-inline: 1.5rem;
+	}
+
+	/* .safari-num-break-down {
+		display: grid;
+		grid-template-columns: repeat(2, max-content);
+	} */
+
+	.safari-num-break-down {
+		padding-inline: 2rem;
+	}
+
+	.safari-num-break-down p {
+		font-size: var(--h1-font-size);
+		margin-bottom: 1rem;
+	}
+
+	.list__group li {
+		font-weight: var(--font-semi-bold);
+		font-size: var(--large-font-size);
+	}
+
+	.safari-num-addition div {
+		text-align: center;
+		width: 60%;
+		margin: 0 auto;
+		margin-block: 1rem 3rem;
+	}
+
+	.safari-num-addition p span {
+		font-size: var(--h1-font-size);
+		font-weight: var(--font-semi-bold);
+		/* margin-bottom: 1rem; */
+		color: var(--title-color);
+		text-decoration: underline;
+	}
+
+	.safari-num-addition p {
+		/* margin-top: 1rem; */
+		/* margin-bottom: 2rem; */
+		font-size: var(--h3-font-size);
+	}
+
+	.safari-day-card {
+		display: grid;
+	}
+
+	.safari-day {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		column-gap: 2rem;
+	}
+
+	.safari-day-title {
+		position: absolute;
+		top: -2.5rem;
+		left: 1rem;
+		right: 1rem;
+		/* transform: translate(-50%, -50%); */
+		font-family: var(--secondary-style);
+		color: var(--title-color);
+		text-align: center;
+		font-size: var(--large-font-size);
+		font-weight: var(--font-bold);
+	}
+
+	.safari-num-btn {
+		margin: 0 auto;
+		margin-top: 1.5rem;
+		width: 50%;
+		justify-self: center;
+		cursor: pointer;
+		text-align: center;
+	}
+
+	.safari-day-breakdown {
+		display: grid;
+		row-gap: 4rem;
+	}
+
+	.car-details {
+		display: grid;
+		row-gap: 4rem;
+	}
+
+	.car-detail-visual-cont {
+		font-size: var(--larger-font-size);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 3rem;
+		border: 1px solid black;
+		margin: 0 auto;
+		border-radius: 50%;
+		background-color: var(--subtitle-color);
+	}
+
+	.car-detail-visual p {
+		font-size: var(--h2-font-size);
+		font-weight: var(--font-semi-bold);
+		opacity: 0.5;
+	}
+
+	.car-detail-visual {
+		display: flex;
+		flex-direction: column;
+		row-gap: 0.5rem;
+		text-align: center;
+	}
+
+	.car-design-break-down {
+		margin-top: 0rem;
+	}
+
+	.car-details-pas {
+		row-gap: 2rem;
+	}
+
+	.breakdown-list hr {
+		margin-block: 1rem;
+	}
+
+	.car-hire-rates {
+		margin-block: 5rem 2rem;
+		background-color: var(--title-color);
+		padding: 2rem 1.5rem;
+	}
+
+	.car-hire-intro {
+		display: grid;
+		margin-block: 3rem 2rem;
+		opacity: 1;
+		/* animation: slide-in 2s 0.5s cubic-bezier(0, 0.5, 0, 1) forwards; */
+		padding-inline: 1.5rem;
+	}
+
+	.tables-car-container {
+		row-gap: 2rem;
+	}
+
+	.car-rate-cont p {
+		text-transform: uppercase;
+		text-align: center;
+		text-decoration: underline;
+		margin-bottom: 1rem;
+		color: var(--subtitle-color);
+		font-size: var(--h2-font-size);
+		width: 80%;
+	}
+
+	.car-rate-table thead tr th {
+		border-block: 1px solid white;
+		color: var(--body-color);
+		padding: 4px;
+		text-align: center;
+	}
+
+	.car-rate-table tbody tr td {
+		color: var(--body-color);
+		padding-right: 0.5rem;
+		border-bottom: 1px solid white;
+		text-align: center;
+		vertical-align: text-top;
+		padding-block: 0.6rem;
+	}
+
+	.taxi-intro-sec {
+		margin-block: 3rem 2rem;
+		padding-inline: 3rem;
+	}
+
+	.taxi-larger-progress {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.taxi-book-progres {
+		display: none;
+		position: relative;
+		margin-bottom: 3rem;
+		box-shadow: 4px 4px 10px hsla(22, 100%, 8%, 0.1);
+	}
+
+	.choose-vehicle-flex {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.summary-taxi-details {
+		padding: 2rem 1rem;
+		background-color: #e0cccc;
+	}
+
+	.summary-taxi-details-end {
+		padding: 2rem 1rem;
+		background-color: #e0cccc;
+	}
+
+	.progress-relative-cont {
+		position: relative;
+		margin: 0 auto;
+	}
+
+	.taxi-sel-img img {
+		object-fit: cover;
+	}
+
+	.taxi-price {
+		margin-top: 1.5rem;
+		color: var(--first-color);
+		font-size: var(--larger-font-size);
+	}
+
+	.taxi-select-btn {
+		padding: 1rem 1.5rem;
+		letter-spacing: 6px;
+	}
+
+	.taxi-booking-btns {
+		display: flex;
+		flex-direction: column;
+		row-gap: 0.5rem;
+	}
+
+	.name-col-2 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		margin-bottom: 1rem;
+	}
+
+	.taxi-booking-summary {
+		row-gap: 2rem;
+	}
+
+	.taxi-item {
+		display: flex;
+		column-gap: 1rem;
+	}
+
+	.taxi-item .taxi-pass i {
+		font-size: var(--larger-font-size);
+		opacity: 0.5;
+	}
+
+	.backgroud-progress {
+		display: block;
+		position: absolute;
+		height: 2px;
+		background-color: rgba(0, 0, 0, 0.4);
+		top: 1.7rem;
+		right: 3rem;
+		left: 3rem;
+		z-index: -2;
+	}
+
+	.safari-button-group {
+		display: flex;
+		flex-direction: column;
+		margin-block: 0.8rem 0.5rem;
+		margin-inline: 0.5rem;
+		row-gap: 0.5rem;
+	}
+
+	.safari-button-group div {
+		margin: 0;
+		width: 100%;
+	}
+
+	.quick-view-overlay {
+		position: fixed;
+		top: -110rem;
+		left: 0;
+		right: 0;
+		height: 100vh;
+		padding-inline: 3rem;
+		background-color: rgba(0, 0, 0, 0.7);
+		overflow: auto;
+		z-index: 50;
+	}
+
+	.safari-button-group-modal {
+		display: flex;
+		flex-direction: column;
+		margin-top: 1.5rem;
+	}
+
+	.safari-button-group-modal div {
+		font-size: var(--h3-font-size);
+		margin-block: 0.5rem 0.8rem;
+		cursor: pointer;
+		text-align: center;
+	}
+
+	.quick-view-des .section-title {
+		font-size: var(--normal-font-size);
+		text-align: start;
+	}
+
+	.safari-day-accom {
+		background-color: var(--first-color);
+		margin-block: 3rem 0rem;
+		display: grid;
+		padding: 2rem 1.5rem 1rem 1.5rem;
+	}
+
+	.price-grab {
+		display: flex;
+		column-gap: 0.5rem;
+		width: calc(300% + 1rem);
+		transition: transform 0.3s ease-in-out;
+	}
+
+	.price-table-cont h1 {
+		font-size: var(--h2-font-size);
+	}
+
+	.accomo-sect-1 h2,
+	.price-table-cont h2 {
+		font-size: var(--h3-font-size);
+		opacity: 0.7;
+	}
+
+	.safari-price-table tbody td {
+		border: 1px solid var(--title-color);
+		padding: 0.25rem 0.75rem;
+	}
+
+	.safari-price-table thead td {
+		border: 1px solid var(--title-color);
+		padding: 0.8rem 0.75rem;
+		text-align: center;
+	}
+
+	.accomodation-options {
+		display: flex;
+		justify-content: start;
+		column-gap: 0.5rem;
+	}
+
+	.accomodation-option {
+		background-color: rgb(145, 50, 12);
+		transform: skew(-20deg);
+		padding: 0.25rem 1.4rem;
+		color: var(--body-color);
+		font-weight: var(--font-bold);
+		font-size: var(--normal-font-size);
+		cursor: pointer;
+	}
+
+	.safari-not-included {
+		padding-inline: 1.5rem;
+		background-color: rgb(241, 230, 230);
+		padding-bottom: 0.5rem;
+	}
+
+	.safari-accomodation-sec {
+		font-weight: var(--font-semi-bold);
+		margin-top: 3rem;
+		background-image: linear-gradient(to bottom, white 10%, transparent),
+			url(../images/keyur-nandaniya-vu0gvM5he8o-unsplash.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		padding-inline: 1.5rem;
+		padding-bottom: 3rem;
+	}
+
+	.tour-breakdown li {
+		display: flex;
+		column-gap: 0.5rem;
+		align-items: center;
+		margin-bottom: 0.3rem;
+	}
+
+	.footer-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		margin-bottom: 2rem;
 	}
 }
 
@@ -309,6 +820,628 @@ h4 {
 		box-shadow: 6px 10px 20px rgba(0, 0, 0, 0.3);
 		background-color: var(--first-color);
 	}
+
+	.safari-intro {
+		margin-block: 4rem 1rem;
+		display: grid;
+		opacity: 1;
+		padding-inline: 3rem;
+		/* animation: slide-in 2s 0.5s cubic-bezier(0, 0.5, 0, 1) forwards; */
+	}
+
+	.safari-section-sub {
+		margin-block: 0.25rem 0.8rem;
+		font-size: var(--h1-font-size);
+	}
+
+	.safari-description {
+		font-weight: var(--font-semi-bold);
+		font-size: var(--h2-font-size);
+		text-align: center;
+	}
+
+	.safaris-grid-section {
+		margin-block: 4rem 1rem;
+		padding-inline: 3rem;
+	}
+
+	.days-selection {
+		margin-bottom: 2.5rem;
+		text-align: center;
+		font-family: var(--secondary-style);
+		font-weight: var(--font-medium);
+		font-size: var(--h2-font-size);
+	}
+
+	.day-number {
+		margin-top: 1rem;
+		font-size: var(--h2-font-size);
+	}
+
+	.show-all {
+		width: 12rem;
+		margin: 0 auto;
+		margin-block: 7rem 2rem;
+		text-align: center;
+		cursor: pointer;
+	}
+
+	.safaris-grid {
+		display: grid;
+		margin-block: 2rem 1rem;
+		row-gap: 2.5rem;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 1.5rem;
+	}
+
+	.safari-card-title {
+		font-size: var(--h2-font-size);
+		margin-bottom: 0.8rem;
+		text-transform: uppercase;
+	}
+
+	.last-two-words::before {
+		content: "";
+	}
+
+	.safari-card-description {
+		text-align: start;
+		padding-inline: 0.5rem;
+		opacity: 0.6;
+		font-size: var(--small-font-size);
+	}
+
+	.safari-learn-more {
+		width: 60%;
+		margin: 0 auto;
+		margin-block: 0.8rem 01rem;
+		cursor: pointer;
+	}
+
+	.section-questions {
+		margin-block: 4rem 1rem;
+		padding-inline: 3rem;
+		display: grid;
+	}
+
+	.question {
+		padding: 1.5rem;
+		display: grid;
+		row-gap: 2rem;
+		box-shadow: 2px 8px 30px hsla(22, 100%, 8%, 0.1);
+	}
+
+	.safari-option {
+		text-align: center;
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		box-shadow: 0 8px 24px hsla(22, 100%, 8%, 0.2);
+	}
+
+	.service-nairobi-bg p,
+	.service-header-bg p {
+		font-size: 1.8rem;
+	}
+
+	.safari-num-intro {
+		margin-block: 4.5rem 1rem;
+		padding-inline: 3rem;
+	}
+
+	/* .safari-day-card {
+		display: grid;
+		flex: 1;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 1.5rem;
+	} */
+
+	/* .safari-day {
+		display: grid;
+		flex: 1;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 1.5rem;
+	}  */
+
+	/* .safari-card-item {
+		flex: 1;
+	} */
+
+	/* .safari-day {
+		display: contents;
+	} */
+
+	/* .safari-day:nth-child(even) .safari-card-item:nth-child(1) {
+		grid-column: 2;
+	}
+
+	.safari-day:nth-child(even) .safari-card-item:nth-child(2) {
+		grid-column: 1;
+	} */
+
+	.safari-day {
+		position: relative;
+		display: flex;
+		/* flex-direction: column; */
+		column-gap: 2rem;
+	}
+
+	.safari-day-title {
+		position: absolute;
+		top: -2.5rem;
+		left: 1rem;
+		right: 1rem;
+		font-family: var(--secondary-style);
+		color: var(--title-color);
+		text-align: center;
+		font-size: var(--large-font-size);
+		font-weight: var(--font-bold);
+	}
+
+	.safari-day:nth-child(even) .safari-card-item:nth-child(1) {
+		order: 2;
+	}
+
+	.safari-day:nth-child(even) .safari-card-item:nth-child(2) {
+		order: 1;
+	}
+
+	.safari-day-breakdown {
+		display: grid;
+		row-gap: 5rem;
+	}
+
+	.safari-day-breakdown {
+		margin-block: 3.5rem 2rem;
+		padding-inline: 3rem;
+	}
+
+	.safari-num-break-down {
+		padding-inline: 2rem;
+	}
+
+	.safari-card-item .safari-num-btn {
+		margin-bottom: auto;
+	}
+
+	.safari-num-break-down p {
+		font-size: var(--h1-font-size);
+		margin-bottom: 1rem;
+	}
+
+	.list__group li {
+		font-weight: var(--font-semi-bold);
+		font-size: var(--large-font-size);
+	}
+
+	.safari-num-addition div {
+		text-align: center;
+		width: 60%;
+		margin: 0 auto;
+		margin-block: 1rem 3rem;
+	}
+
+	.safari-num-addition p span {
+		font-size: var(--h1-font-size);
+		font-weight: var(--font-semi-bold);
+		/* margin-bottom: 1rem; */
+		color: var(--title-color);
+		text-decoration: underline;
+	}
+
+	.safari-num-addition p {
+		/* margin-top: 1rem; */
+		/* margin-bottom: 2rem; */
+		font-size: var(--h3-font-size);
+	}
+
+	.safari-num-btn {
+		margin: 0 auto;
+		margin-top: 3rem;
+		/* width: 50%; */
+		justify-self: center;
+		cursor: pointer;
+		text-align: center;
+	}
+
+	.car-details {
+		display: grid;
+		grid-template-columns: 1fr 0.6fr;
+		column-gap: 0.5rem;
+		/* row-gap: 4rem; */
+	}
+
+	.car-detail-visual-cont {
+		/* transform: scale(0.7); */
+		font-size: var(--larger-font-size);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 2.5rem;
+		border: 1px solid black;
+		margin: 0 auto;
+		border-radius: 50%;
+		background-color: var(--subtitle-color);
+	}
+
+	.car-detail-visual p {
+		font-size: var(--h3-font-size);
+		font-weight: var(--font-semi-bold);
+		opacity: 0.5;
+	}
+
+	.car-detail-visual {
+		display: flex;
+		flex-direction: column;
+		row-gap: 0.5rem;
+		text-align: center;
+	}
+
+	/* .car-design-break-down {
+		margin-top: -12rem;
+	} */
+
+	.car-details-pas {
+		row-gap: 0.5rem;
+	}
+
+	/* .breakdown-list {
+		margin-top: -5rem;
+	} */
+
+	.breakdown-list hr {
+		margin-block: 0.8rem;
+	}
+
+	.car-hire-rates {
+		margin-block: 5rem 2rem;
+		background-color: var(--title-color);
+		padding: 3rem 3rem;
+	}
+
+	.car-hire-intro {
+		display: grid;
+		margin-block: 3rem 2rem;
+		opacity: 1;
+		/* animation: slide-in 2s 0.5s cubic-bezier(0, 0.5, 0, 1) forwards; */
+		padding-inline: 3rem;
+	}
+
+	.tables-car-container {
+		row-gap: 4rem;
+	}
+
+	.car-rate-cont p {
+		text-transform: uppercase;
+		text-align: center;
+		text-decoration: underline;
+		margin-bottom: 1.5rem;
+		color: var(--subtitle-color);
+		font-size: var(--h1-font-size);
+		width: 80%;
+	}
+
+	.car-rate-table thead tr th {
+		border-block: 1px solid white;
+		color: var(--body-color);
+		padding: 10px;
+		text-align: center;
+	}
+
+	.car-rate-table tbody tr td {
+		color: var(--body-color);
+		padding-right: 0.5rem;
+		border-bottom: 1px solid white;
+		text-align: center;
+		vertical-align: text-top;
+		padding-block: 0.7rem;
+	}
+
+	.taxi-intro-sec {
+		margin-block: 3rem 2rem;
+		padding-inline: 1.5rem;
+	}
+
+	.taxi-larger-progress {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.taxi-book-progres {
+		display: none;
+		position: relative;
+		margin-bottom: 3rem;
+		box-shadow: 4px 4px 10px hsla(22, 100%, 8%, 0.1);
+	}
+
+	.booking-container {
+		grid-template-columns: 1fr 1fr;
+		column-gap: 0.5rem;
+		grid-template-areas: "left right";
+	}
+
+	.booking-container-choose-vehicle {
+		grid-template-columns: 0.5fr 1fr;
+		column-gap: 0.5rem;
+		grid-template-areas: "left right";
+	}
+
+	.booking-car-sect {
+		grid-area: right;
+	}
+	.taxi-booking-summary {
+		grid-area: left;
+	}
+
+	/* .booking-container .booking-car-sect {
+		grid-column: 2;
+	}
+
+	.booking-container .taxi-booking-summary {
+		grid-column: 1;
+	} */
+
+	.taxi-btn-right {
+		margin-left: auto;
+		width: 50%;
+	}
+
+	.choose-vehicle-flex {
+		display: flex;
+		flex: 1;
+		/* flex-direction: column; */
+	}
+
+	.summary-taxi-details {
+		padding: 2rem 1rem;
+		margin-left: -2rem;
+		background-color: #e0cccc;
+	}
+
+	.summary-taxi-details-end {
+		padding: 2rem 1rem;
+		background-color: #e0cccc;
+	}
+
+	.taxi-total-cal {
+		margin-left: -1rem;
+	}
+
+	.taxi-total-cal-end {
+		margin-left: 0rem;
+	}
+
+	.progress-relative-cont {
+		position: relative;
+		margin: 0 auto;
+		width: 90%;
+	}
+
+	.taxi-sel-img img {
+		object-fit: cover;
+		height: 18rem;
+	}
+
+	.taxi-name-select {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.taxi-price {
+		margin-top: 0.7rem;
+		color: var(--first-color);
+		font-size: 3rem;
+	}
+
+	.taxi-select-btn {
+		padding: 0.5rem 1rem;
+		align-items: center;
+		justify-content: center;
+		margin: auto 0;
+		letter-spacing: 3px;
+	}
+
+	.taxi-booking-btns {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row-reverse;
+	}
+
+	.contact-grid-swap {
+		grid-area: right;
+	}
+	.summary-taxi-details {
+		grid-area: left;
+	}
+
+	.summary-taxi-details-end {
+		padding: 2rem 1rem;
+		background-color: #e0cccc;
+	}
+
+	.summary-col-2 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		/* margin-bottom: 1rem; */
+	}
+
+	.name-col-2 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		/* flex-direction: row;
+		justify-content: space-between; */
+		/* flex-direction: column; */
+		margin-bottom: 1rem;
+	}
+
+	.taxi-booking-summary {
+		row-gap: 2rem;
+	}
+
+	.taxi-car-make {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 1rem;
+	}
+
+	.extra-break_down {
+		width: 60%;
+		text-align: end;
+	}
+
+	.taxi-item {
+		display: flex;
+		column-gap: 1rem;
+	}
+
+	.taxi-item .taxi-pass i {
+		font-size: var(--larger-font-size);
+		opacity: 0.5;
+	}
+
+	.backgroud-progress {
+		display: block;
+		position: absolute;
+		height: 2px;
+		background-color: rgba(0, 0, 0, 0.4);
+		top: 1.7rem;
+		right: 3rem;
+		left: 3rem;
+		z-index: -2;
+	}
+
+	.safari-button-group {
+		display: flex;
+		flex-direction: column;
+		margin-block: 0.8rem 0.5rem;
+		margin-inline: 0.5rem;
+		row-gap: 0.5rem;
+	}
+
+	.safari-button-group div {
+		margin: 0;
+		width: 100%;
+	}
+
+	.quick-view-overlay {
+		position: fixed;
+		top: -110rem;
+		left: 0;
+		right: 0;
+		height: 100vh;
+		padding-inline: 3rem;
+		background-color: rgba(0, 0, 0, 0.7);
+		overflow: auto;
+		z-index: 50;
+	}
+
+	.quick-view-details {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 1.5rem;
+	}
+
+	.safari-button-group-modal {
+		display: flex;
+		justify-content: space-between;
+		column-gap: 2rem;
+		margin-top: 1.5rem;
+		margin-inline: 3rem;
+	}
+
+	.safari-button-group-modal div {
+		font-size: var(--h3-font-size);
+		margin-block: 0.5rem 0.8rem;
+		cursor: pointer;
+		text-align: center;
+		width: 80%;
+	}
+
+	.quick-view-des .section-title {
+		font-size: var(--large-font-size);
+		text-align: start;
+	}
+
+	.safari-day-accom {
+		background-color: var(--first-color);
+		margin-block: 3rem 0rem;
+		display: grid;
+		padding: 2rem 3rem 1rem 3rem;
+	}
+
+	.price-grab {
+		display: flex;
+		column-gap: 0.5rem;
+		width: calc(300% + 1rem);
+		transition: transform 0.3s ease-in-out;
+	}
+
+	.price-table-cont h1 {
+		font-size: var(--h2-font-size);
+	}
+
+	.accomo-sect-1 h2,
+	.price-table-cont h2 {
+		font-size: var(--h3-font-size);
+		opacity: 0.7;
+	}
+
+	.safari-price-table tbody td {
+		border: 1px solid var(--title-color);
+		padding: 0.25rem 0.75rem;
+	}
+
+	.safari-price-table thead td {
+		border: 1px solid var(--title-color);
+		padding: 0.8rem 0.75rem;
+		text-align: center;
+		font-size: var(--h3-font-size);
+	}
+
+	.accomodation-options {
+		display: flex;
+		justify-content: start;
+		column-gap: 0.5rem;
+	}
+
+	.accomodation-option {
+		background-color: rgb(145, 50, 12);
+		transform: skew(-20deg);
+		padding: 0.5rem 1.8rem;
+		color: var(--body-color);
+		font-weight: var(--font-bold);
+		font-size: var(--normal-font-size);
+		cursor: pointer;
+	}
+
+	.safari-not-included {
+		padding-inline: 3rem;
+		background-color: rgb(241, 230, 230);
+		padding-bottom: 0.5rem;
+	}
+
+	.safari-accomodation-sec {
+		font-weight: var(--font-semi-bold);
+		margin-top: 3rem;
+		background-image: linear-gradient(to bottom, white 10%, transparent),
+			url(../images/keyur-nandaniya-vu0gvM5he8o-unsplash.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		padding-inline: 3rem;
+		padding-bottom: 3rem;
+	}
+
+	.tour-breakdown li {
+		display: flex;
+		column-gap: 0.5rem;
+		align-items: center;
+		margin-bottom: 0.5rem;
+	}
+
+	.footer-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		margin-bottom: 2rem;
+	}
 }
 
 @media screen and (min-width: 950px) {
@@ -403,5 +1536,641 @@ h4 {
 		padding: 3rem 3rem 4rem 3rem;
 		box-shadow: 6px 10px 20px rgba(0, 0, 0, 0.3);
 		background-color: var(--first-color);
+	}
+
+	.safari-intro {
+		margin-block: 4rem 1rem;
+		display: grid;
+		opacity: 1;
+		padding-inline: 5rem;
+		/* animation: slide-in 2s 0.5s cubic-bezier(0, 0.5, 0, 1) forwards; */
+	}
+
+	.safari-section-sub {
+		margin-block: 0.25rem 0.9rem;
+		font-size: var(--larger-font-size);
+	}
+
+	.safari-description {
+		font-weight: var(--font-semi-bold);
+		font-size: var(--h2-font-size);
+		text-align: center;
+	}
+
+	.safaris-grid-section {
+		margin-block: 4rem 1rem;
+		padding-inline: 3rem;
+	}
+
+	.days-selection {
+		margin-bottom: 2.5rem;
+		text-align: center;
+		font-family: var(--secondary-style);
+		font-weight: var(--font-medium);
+		font-size: var(--h2-font-size);
+	}
+
+	.day-number {
+		margin-top: 1rem;
+		font-size: var(--h2-font-size);
+	}
+
+	.show-all {
+		width: 14rem;
+		margin: 0 auto;
+		margin-block: 7rem 2rem;
+		text-align: center;
+		cursor: pointer;
+	}
+
+	.safaris-grid {
+		display: grid;
+		margin-block: 2rem 1rem;
+		row-gap: 4rem;
+		grid-template-columns: 1fr 1fr 1fr;
+		column-gap: 1rem;
+	}
+
+	.safari-card-title {
+		font-size: var(--h2-font-size);
+		margin-bottom: 0.8rem;
+		text-transform: uppercase;
+	}
+
+	.last-two-words::before {
+		content: "";
+	}
+
+	.safari-card-description {
+		text-align: start;
+		padding-inline: 0.5rem;
+		opacity: 0.6;
+		font-size: var(--small-font-size);
+	}
+
+	.safari-learn-more {
+		width: 60%;
+		margin: 0 auto;
+		margin-block: 1.2rem 1.4rem;
+		cursor: pointer;
+	}
+
+	.section-questions {
+		margin-block: 4rem 1rem;
+		padding-inline: 9rem;
+		display: grid;
+	}
+
+	.question {
+		padding: 1.5rem;
+		display: grid;
+		row-gap: 2rem;
+		box-shadow: 4px 8px 8px hsla(22, 100%, 8%, 0.15);
+	}
+
+	.safari-option {
+		text-align: center;
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		box-shadow: 4px 8px 8px hsla(22, 100%, 8%, 0.15);
+	}
+
+	/*======================== HERE ================================ */
+	/* .safari-option div {
+		margin-bottom: auto;
+	} */
+
+	.service-nairobi-bg p,
+	.service-header-bg p {
+		font-size: 2.5rem;
+	}
+
+	.safari-num-intro {
+		margin-block: 5rem 5rem;
+		padding-inline: 5rem;
+	}
+
+	.safari-day {
+		position: relative;
+		display: flex;
+		column-gap: 0.8rem;
+	}
+
+	.safari-day-title {
+		position: absolute;
+		top: -2.5rem;
+		left: 1rem;
+		right: 1rem;
+		font-family: var(--secondary-style);
+		color: var(--title-color);
+		text-align: center;
+		font-size: var(--large-font-size);
+		font-weight: var(--font-bold);
+	}
+
+	.safari-day:nth-child(even) .safari-card-item:nth-child(1) {
+		order: 2;
+	}
+
+	.safari-day:nth-child(even) .safari-card-item:nth-child(2) {
+		order: 1;
+	}
+
+	.safari-day-breakdown {
+		display: grid;
+		row-gap: 5rem;
+	}
+
+	.safari-day-breakdown {
+		margin-block: 3.5rem 2rem;
+		padding-inline: 3rem;
+	}
+
+	.safari-num-break-down {
+		display: grid;
+		row-gap: 2rem;
+		padding-inline: 4rem;
+	}
+
+	.safari-card-item .safari-num-btn {
+		margin-bottom: auto;
+	}
+
+	.safari-num-break-down p {
+		font-size: var(--h1-font-size);
+		margin-bottom: 1rem;
+	}
+
+	.list__group li {
+		font-weight: var(--font-semi-bold);
+		font-size: var(--large-font-size);
+	}
+
+	.safari-num-addition div {
+		text-align: center;
+		width: 65%;
+		margin: 0 auto;
+		margin-block: 1rem 3rem;
+	}
+
+	.safari-num-addition {
+		padding-inline: 1.5rem;
+	}
+
+	.safari-num-addition p span {
+		font-size: var(--h1-font-size);
+		font-weight: var(--font-semi-bold);
+		/* margin-bottom: 1rem; */
+		color: var(--title-color);
+		text-decoration: underline;
+	}
+
+	.safari-num-addition p {
+		/* margin-top: 1rem; */
+		/* margin-bottom: 2rem; */
+		font-size: var(--h3-font-size);
+	}
+
+	.safari-num-btn {
+		margin: 0 auto;
+		margin-top: 3rem;
+		/* width: 50%; */
+		justify-self: center;
+		cursor: pointer;
+		text-align: center;
+	}
+
+	.car-details {
+		display: grid;
+		grid-template-columns: 1fr 0.4fr;
+		column-gap: 1rem;
+		row-gap: 4rem;
+	}
+
+	.car-detail-visual-cont {
+		/* transform: scale(0.5); */
+		font-size: var(--larger-font-size);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 2.2rem;
+		border: 1px solid black;
+		margin: 0 auto;
+		border-radius: 50%;
+		background-color: var(--subtitle-color);
+	}
+
+	.car-detail-visual p {
+		font-size: var(--h4-font-size);
+		font-weight: var(--font-semi-bold);
+		opacity: 0.5;
+	}
+
+	.car-detail-visual {
+		display: flex;
+		flex-direction: column;
+		column-gap: 1.5rem;
+		row-gap: 0.5rem;
+		text-align: center;
+	}
+
+	/* .car-design-break-down {
+		margin-top: -19rem;
+	} */
+	/* .car-details-pas {
+		row-gap: 0.5rem;
+	} */
+
+	/* .breakdown-list {
+		margin-top: -14rem;
+	} */
+
+	.breakdown-list hr {
+		margin-block: 0.8rem;
+	}
+
+	.car-hire-rates {
+		margin-block: 5rem 2rem;
+		background-color: var(--title-color);
+		padding: 3rem 4rem;
+	}
+
+	.car-hire-intro {
+		display: grid;
+		margin-block: 3rem 2.25rem;
+		opacity: 1;
+		/* animation: slide-in 2s 0.5s cubic-bezier(0, 0.5, 0, 1) forwards; */
+		padding-inline: 5rem;
+	}
+
+	.tables-car-container {
+		row-gap: 4rem;
+	}
+
+	.car-rate-cont p {
+		text-transform: uppercase;
+		text-align: center;
+		text-decoration: underline;
+		margin: 0 auto;
+		margin-bottom: 1.5rem;
+		color: var(--subtitle-color);
+		font-size: var(--h1-font-size);
+		width: 80%;
+	}
+
+	.car-rate-table thead tr th {
+		border-block: 1px solid white;
+		color: var(--body-color);
+		padding: 10px;
+		text-align: center;
+	}
+
+	.car-rate-table tbody tr td {
+		color: var(--body-color);
+		padding-right: 0.5rem;
+		border-bottom: 1px solid white;
+		text-align: center;
+		vertical-align: text-top;
+		padding-block: 0.7rem;
+	}
+	.taxi-intro-sec {
+		margin-block: 3rem 2rem;
+		padding-inline: 3rem;
+	}
+
+	.taxi-larger-progress {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.taxi-book-progres {
+		display: none;
+		position: relative;
+		margin-bottom: 3rem;
+		box-shadow: 4px 4px 10px hsla(22, 100%, 8%, 0.1);
+	}
+
+	.booking-container {
+		grid-template-columns: 1fr 1fr;
+		/* grid-template-columns: 1fr 1fr 1fr; */
+		column-gap: 0.8rem;
+		grid-template-areas: "left right";
+	}
+
+	.summary-large-col {
+		grid-template-columns: 1fr 1fr 1fr;
+		column-gap: 0.8rem;
+		grid-template-areas: "left right";
+	}
+
+	.booking-container-choose-vehicle {
+		grid-template-columns: 0.6fr 1fr;
+		column-gap: 0.8rem;
+		grid-template-areas: "left right";
+	}
+
+	.booking-car-sect {
+		grid-area: right;
+	}
+	.taxi-booking-summary {
+		grid-area: left;
+	}
+
+	/* .booking-container .booking-car-sect {
+		grid-column: 2;
+	}
+
+	.booking-container .taxi-booking-summary {
+		grid-column: 1;
+	} */
+
+	.taxi-btn-right {
+		margin-left: auto;
+		width: 50%;
+	}
+
+	.taxi-next-btn-end {
+		width: 25%;
+	}
+
+	.choose-vehicle-flex {
+		display: flex;
+		flex: 1;
+		/* flex-direction: column; */
+	}
+
+	.summary-taxi-details {
+		padding: 2rem 1rem;
+		margin-left: 0rem;
+		background-color: #e0cccc;
+	}
+
+	.summary-taxi-details-end {
+		padding: 2rem 1rem;
+		background-color: #e0cccc;
+	}
+
+	.taxi-total-cal {
+		margin-left: 0rem;
+	}
+
+	.taxi-total-cal-end {
+		margin-left: 0rem;
+	}
+
+	.progress-relative-cont {
+		position: relative;
+		margin: 0 auto;
+		width: 75%;
+	}
+
+	.taxi-sel-img img {
+		object-fit: cover;
+		height: 22rem;
+	}
+
+	.taxi-name-select {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.taxi-price {
+		margin-top: 0.7rem;
+		color: var(--first-color);
+		font-size: 3rem;
+	}
+
+	.taxi-select-btn {
+		padding: 0.5rem 1rem;
+		align-items: center;
+		justify-content: center;
+		margin: auto 0;
+		letter-spacing: 3px;
+	}
+
+	.taxi-booking-btns {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row-reverse;
+	}
+
+	.contact-grid-swap {
+		grid-area: right;
+	}
+	.summary-taxi-details {
+		/* position: sticky; */
+		grid-area: left;
+		/* top: 0; */
+	}
+
+	.summary-taxi-details-end {
+		padding: 2rem 1rem;
+		background-color: #e0cccc;
+	}
+
+	.summary-col-2 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		/* margin-bottom: 1rem; */
+	}
+
+	.name-col-2 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		margin-bottom: 1rem;
+	}
+
+	.taxi-booking-summary {
+		row-gap: 2rem;
+	}
+
+	.taxi-car-make {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 1rem;
+	}
+
+	.extra-break_down {
+		width: 60%;
+		text-align: end;
+	}
+
+	.taxi-item {
+		display: flex;
+		column-gap: 1rem;
+	}
+
+	.taxi-item .taxi-pass i {
+		font-size: var(--larger-font-size);
+		opacity: 0.5;
+	}
+
+	.backgroud-progress {
+		display: block;
+		position: absolute;
+		height: 2px;
+		background-color: rgba(0, 0, 0, 0.4);
+		top: 1.7rem;
+		right: 3rem;
+		left: 3rem;
+		z-index: -2;
+	}
+
+	.safari-button-group {
+		display: flex;
+		column-gap: 0.5rem;
+		/* flex-direction: column; */
+		justify-content: space-between;
+		margin-block: 0.8rem 0.5rem;
+		margin-inline: 0.5rem;
+		row-gap: 0.5rem;
+	}
+
+	.safari-button-group div {
+		margin: 0;
+		padding: 6px 8px;
+		/* width: 100%; */
+		font-size: var(--normal-font-size);
+	}
+
+	.quick-view-overlay {
+		position: fixed;
+		top: -110rem;
+		left: 0;
+		right: 0;
+		height: 100vh;
+		padding-inline: 10rem;
+		background-color: rgba(0, 0, 0, 0.7);
+		overflow: auto;
+		z-index: 50;
+	}
+
+	.quick-view-details {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 1.5rem;
+	}
+
+	.safari-button-group-modal {
+		display: flex;
+		justify-content: space-between;
+		column-gap: 2rem;
+		margin-top: 1.5rem;
+		margin-inline: 3rem;
+	}
+
+	.safari-button-group-modal div {
+		font-size: var(--h3-font-size);
+		margin-block: 0.5rem 0.8rem;
+		cursor: pointer;
+		text-align: center;
+		width: 80%;
+	}
+
+	.quick-view-des .section-title {
+		font-size: var(--large-font-size);
+		text-align: start;
+	}
+
+	.safari-day-accom {
+		background-color: var(--first-color);
+		margin-block: 3rem 0rem;
+		display: grid;
+		padding: 2rem 3rem 1rem 3rem;
+	}
+
+	.price-grab {
+		display: flex;
+		column-gap: 0.5rem;
+		width: calc(300% + 1rem);
+		transition: transform 0.3s ease-in-out;
+	}
+
+	.price-table-cont h1 {
+		font-size: var(--h1-font-size);
+	}
+
+	.accomo-sect-1 h2,
+	.price-table-cont h2 {
+		font-size: var(--h2-font-size);
+		opacity: 0.7;
+	}
+
+	.safari-price-table tbody td {
+		border: 1px solid var(--title-color);
+		padding: 0.25rem 1rem;
+	}
+
+	.safari-price-table thead td {
+		border: 1px solid var(--title-color);
+		padding: 0.8rem 1rem;
+		text-align: center;
+		font-size: var(--h3-font-size);
+	}
+
+	.accomodation-options {
+		display: flex;
+		justify-content: start;
+		column-gap: 0.5rem;
+	}
+
+	.accomodation-option {
+		background-color: rgb(145, 50, 12);
+		transform: skew(-20deg);
+		padding: 0.5rem 1.5rem;
+		color: var(--body-color);
+		font-weight: var(--font-bold);
+		font-size: var(--normal-font-size);
+		cursor: pointer;
+	}
+
+	.safari-not-included {
+		padding-inline: 3rem;
+		background-color: rgb(241, 230, 230);
+		padding-bottom: 0.5rem;
+	}
+
+	.safari-accomodation-sec {
+		font-weight: var(--font-semi-bold);
+		margin-top: 3rem;
+		background-image: linear-gradient(to bottom, white 10%, transparent),
+			url(../images/keyur-nandaniya-vu0gvM5he8o-unsplash.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		padding-inline: 3rem;
+		padding-bottom: 5rem;
+	}
+
+	/* .tour-breakdown li {
+		display: flex;
+		column-gap: 0.5rem;
+		align-items: center;
+		margin-bottom: 0.5rem;
+	} */
+
+	.tour-col-2 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.safari-accomodation-sec ul {
+		font-size: var(--h2-font-size);
+	}
+
+	.tour-breakdown li {
+		display: flex;
+		column-gap: 0.5rem;
+		align-items: center;
+		margin-bottom: 0.8rem;
+	}
+
+	.accomodation-list ul {
+		font-size: var(--normal-font-size);
+	}
+
+	.footer-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		margin-bottom: 2rem;
 	}
 }

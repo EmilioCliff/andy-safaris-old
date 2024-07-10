@@ -3,6 +3,7 @@
 	height: 100vh;
 	position: relative;
 	overflow: hidden;
+	max-width: 1440px;
 }
 
 .carousel .list .item {
@@ -58,7 +59,7 @@
 		left: 0;
 		/* background-color: lightblue; */
 		width: 100%;
-		padding: 1.5rem 1.5rem;
+		padding: .5rem 1.5rem;
 		z-index: 1000;
 		border-bottom: 1px solid white;
 		transition: all 0.8s ease;

@@ -1,0 +1,641 @@
+.taxi-header-bg {
+	height: 70vh;
+	overflow: hidden;
+	color: var(--subtitle-color);
+	position: relative;
+}
+
+.contact-form-page {
+	height: 50vh;
+	overflow: hidden;
+	color: var(--subtitle-color);
+	position: relative;
+}
+
+.contact-form-page::after {
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),
+		url(../images/contact-us-4.jpg) no-repeat bottom;
+	background-size: cover;
+	content: "";
+	opacity: 1;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -2;
+	/* animation: fade-slide-down 2s 0.5s cubic-bezier(0, 0.5, 0, 1) forwards; */
+}
+
+.taxi-header-bg::after {
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),
+		url(../images/taxi2.jpg) no-repeat center;
+	background-size: cover;
+	content: "";
+	opacity: 1;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -2;
+	/* animation: fade-slide-down 2s 0.5s cubic-bezier(0, 0.5, 0, 1) forwards; */
+}
+
+.taxi-header-bg p {
+	text-align: center;
+	width: 30rem;
+	position: absolute;
+	top: 75%;
+	left: 50%;
+	font-size: var(--larger-font-size);
+	font-weight: var(--font-semi-bold);
+}
+
+.taxi-table thead tr th {
+	border-block: 1px solid white;
+	color: var(--body-color);
+	padding: 4px;
+	text-align: center;
+}
+
+.taxi-table tbody tr td {
+	color: var(--body-color);
+	padding-right: 0.5rem;
+	border-bottom: 1px solid white;
+	vertical-align: text-top;
+	padding-block: 0.6rem;
+}
+
+.taxi-table tbody tr td:not(.taxi-table tbody tr td:nth-child(2)) {
+	text-align: center;
+}
+.taxi-destination {
+	text-align: start;
+}
+
+.question-svg-black {
+	color: black;
+	fill: black;
+	background-color: black;
+}
+
+/* .taxi-intro-sec {
+	margin-block: 3rem 2rem;
+	padding-inline: 1.5rem;
+} */
+
+/* .progress-relative-cont {
+	position: relative;
+} */
+
+/* .backgroud-progress {
+	position: absolute;
+	height: 2px;
+	background-color: rgba(0, 0, 0, 0.4);
+	top: 1.7rem;
+	right: 3rem;
+	left: 3rem;
+	z-index: -2;
+} */
+
+.progress-larger {
+	display: flex;
+	flex-direction: column;
+	row-gap: 1rem;
+	align-items: center;
+}
+
+.progres-cont {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 4rem;
+	height: 4rem;
+	background-color: hsl(var(--hue), 100%, 75%);
+	color: var(--body-color);
+	font-weight: var(--font-semi-bold);
+	font-size: var(--large-font-size);
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.progress-larger p {
+	font-weight: var(--font-semi-bold);
+	opacity: 0.6;
+}
+
+.progress-larger-selected div {
+	background-color: var(--first-color);
+}
+
+.progress-larger-selected p {
+	opacity: 1;
+}
+
+/* .radio-input-container, */
+.date-input-container,
+.progress-title,
+.select-options {
+	width: 100%;
+	padding: 1rem 1.5rem;
+	font-family: var(--primary-style);
+	font-size: var(--large-font-size);
+	font-weight: var(--font-semi-bold);
+	border: 1px solid grey;
+}
+
+.select-options {
+	cursor: pointer;
+}
+
+/* .select-selected { */
+/* background-color: dodgerblue; */
+/* background-color: var(--subtitle-color); */
+/* } */
+
+/* input {
+	appearance: none;
+} */
+
+select {
+	appearance: none;
+	background: url(../icons/expand-up-down-line.png) no-repeat 95% center;
+}
+
+/* ::-webkit-input-placeholder {
+	font-size: larger;
+} */
+
+/* .select-selected::after {
+	position: absolute;
+	content: "";
+	top: 0.5rem;
+	right: 1.5rem;
+	width: 0;
+	height: 0;
+	border: 30px solid transparent;
+	border-color: var(--subtitle-color);
+} */
+
+.ride-details {
+	box-shadow: 4px 4px 10px hsla(22, 100%, 8%, 0.1);
+}
+
+.progress-title {
+	background-color: #918e8e;
+	opacity: 0.7;
+}
+
+/* .radio-input-container, */
+.date-input-container {
+	position: relative;
+}
+
+/* .radio-input-label, */
+.date-input-container label {
+	font-size: var(--smallest-font-size);
+	opacity: 0.5;
+	position: absolute;
+	left: 1.5rem;
+	top: 0.5rem;
+}
+
+.error-message {
+	background: rgba(0, 0, 0, 0.7);
+	color: var(--body-color);
+	border-radius: 0.1em;
+	font-weight: var(--font-semi-bold);
+	font-size: 0.7em;
+	padding: 0.25em 0.5em;
+	position: absolute;
+	top: -2.5em;
+	left: calc(50% -8em);
+	/* width: 16em; */
+	z-index: 20;
+	display: none;
+}
+
+.error-message::after {
+	content: "";
+	border-style: solid;
+	border-color: var(--title-color) transparent;
+	border-radius: 0;
+	border-width: 8px 8px 0 8px;
+	position: absolute;
+	bottom: -8px;
+	/* left: calc(50% - 5px); */
+	width: 0;
+}
+
+.date-input-container label i {
+	font-size: var(--normal-font-size);
+}
+
+.date-input-container input::placeholder {
+	font-weight: var(--font-semi-bold);
+}
+
+.date-input-container input {
+	margin-top: 1rem;
+	/* font-weight: var(--font-semi-bold); */
+	font-size: var(--h3-font-size);
+	width: 100%;
+}
+
+/* .radio-input-container input[type="radio"] {
+	margin-top: 1rem;
+	font-weight: var(--font-semi-bold);
+	font-size: var(--h3-font-size);
+
+	opacity: 0;
+	width: 0;
+}
+
+.radio-input-container label[for="one-way"],
+.radio-input-container label[for="two-way"] {
+	display: inline-block;
+	padding-left: 26px;
+	background: url();
+	background-position: 0 -32px;
+	cursor: pointer;
+}
+
+.radio-input-container
+	input:checked
+	+ .radio-input-container
+	label[for="one-way"],
+.radio-input-container
+	input:checked
+	+ .radio-input-container
+	label[for="two-way"] {
+	background-position: 0 0;
+	color: #ce1010;
+} */
+
+.date-input-container textarea {
+	height: 6rem;
+	padding-top: 0.5rem;
+	width: 100%;
+}
+
+.inner-select {
+	padding: 0;
+	border: 0;
+}
+
+.inner-select-option {
+	padding-top: 1.5rem;
+}
+
+.map {
+	/* margin-top: 3rem; */
+	height: 400px;
+	background-color: pink;
+	box-shadow: 4px 0px 10px hsla(22, 100%, 8%, 0.1);
+}
+
+.map-details {
+	display: flex;
+	justify-content: space-between;
+	padding: 1.5rem 1rem;
+	/* margin-top: 1.5rem; */
+	box-shadow: 4px 4px 10px hsla(22, 100%, 8%, 0.1);
+}
+
+.total-detail {
+	display: flex;
+	flex-direction: column;
+	row-gap: 0.5rem;
+	align-items: center;
+}
+
+.map-detail-title {
+	font-size: var(--small-font-size);
+	opacity: 0.5;
+}
+
+.map-detail-value {
+	font-size: var(--large-font-size);
+	margin-top: 1rem;
+}
+
+.taxi-btn i {
+	margin-left: 2rem;
+	font-size: var(--h1-font-size);
+	font-weight: var(--font-medium);
+}
+
+/* .taxi-car-select {
+} */
+
+/* .taxi-sel-img img {
+	height: 18rem;
+	object-fit: cover;
+} */
+.taxi-container {
+	margin-block: 2rem;
+}
+
+.taxi-name-select p {
+	margin-block: 1rem;
+	font-weight: var(--secondary-style);
+	font-weight: var(--font-semi-bold);
+	font-size: var(--h2-font-size);
+}
+
+.taxi-select-btn {
+	/* padding: 1rem 1.5rem; */
+	background-color: #a89c9c;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in, color 0.3s ease-in;
+	border-radius: 3rem;
+	text-align: center;
+	color: var(--body-color);
+	font-size: var(--large-font-size);
+	font-weight: var(--font-semi-bold);
+	/* letter-spacing: 6px; */
+	/* width: 60%;
+	margin: 0 auto; */
+}
+
+.taxi-select-btn:hover {
+	background-color: var(--subtitle-color);
+	color: var(--title-color);
+}
+
+.taxi-select-btn i {
+	display: none;
+}
+
+.taxi-select-btn-selected {
+	background-color: var(--subtitle-color);
+	color: var(--title-color);
+}
+
+.taxi-select-btn-selected i {
+	display: inline-block;
+}
+
+.booking-car-sect {
+	margin-bottom: 4rem;
+}
+
+.booking-car-sect-end {
+	margin-bottom: 4rem;
+}
+
+/* .taxi-price {
+	margin-top: 1.5rem;
+	color: var(--first-color);
+	font-size: var(--larger-font-size);
+} */
+
+.taxi-more-details {
+	display: none;
+}
+
+.taxi-more-details-opened {
+	display: block;
+}
+
+.taxi-more-details-des {
+	margin-block: 1rem;
+	opacity: 0.7;
+}
+
+.taxi-car-make {
+	margin-bottom: 1.5rem;
+	background-color: #e0cccc;
+	padding: 2rem 0.5rem;
+}
+
+.taxi-group {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.taxi-more-btn {
+	font-size: var(--large-font-size);
+	display: flex;
+	align-items: center;
+	column-gap: 0.5rem;
+}
+
+.taxi-more-btn i {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.25rem;
+	border-radius: 50%;
+	cursor: pointer;
+	background-color: #c7bfbf;
+}
+
+.taxi-pass {
+	display: flex;
+	align-items: center;
+	column-gap: 2rem;
+	row-gap: 1rem;
+	font-size: var(--large-font-size);
+}
+
+/* .taxi-booking-summary {
+	row-gap: 2rem;
+} */
+/* margin-bottom: 3rem; */
+
+/* .summary-taxi-details {
+	padding: 2rem 1rem;
+	background-color: #e0cccc;
+} */
+
+.summary-taxi-details h3,
+.summary-taxi-details-end h3 {
+	font-weight: var(--font-semi-bold);
+	margin-bottom: 1rem;
+}
+
+.summary-taxi-details h4,
+.summary-taxi-details-end h4 {
+	opacity: 0.7;
+	margin-bottom: 0.5rem;
+	font-size: var(--small-font-size);
+}
+
+.summary-taxi-details p,
+.summary-taxi-details-end p {
+	font-size: var(--h2-font-size);
+}
+
+.summary-taxi-details hr,
+.summary-taxi-details-end hr {
+	margin-block: 0.5rem;
+}
+
+/* .summary-col-2 {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 1rem;
+} */
+/* display: grid;
+margin-bottom: 1rem; */
+
+.taxi-total-cal hr {
+	margin-block: 0.8rem;
+}
+
+.summary-total {
+	display: flex;
+	justify-content: space-between;
+	font-size: var(--h2-font-size);
+}
+
+.total-bold {
+	font-weight: var(--font-semi-bold);
+}
+
+.total-bold span {
+	opacity: 0.5;
+}
+
+/* .taxi-booking-btns {
+	display: flex;
+	flex-direction: column;
+	row-gap: 0.5rem;
+} */
+
+.taxi-next-btn {
+	padding: 1rem 1.5rem;
+	background-color: #a89c9c;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in, color 0.3s ease-in,
+		border 0.3s ease-in;
+	border-radius: 3rem;
+	text-align: center;
+	color: var(--body-color);
+	font-size: var(--large-font-size);
+	font-weight: var(--font-semi-bold);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 1rem;
+	border: 2px solid #a89c9c;
+}
+
+.taxi-next-btn:not(.taxi-booking-btns .taxi-next-btn:nth-child(2)) {
+	background-color: var(--subtitle-color);
+	color: var(--title-color);
+	border: 2px solid var(--subtitle-color);
+}
+
+.taxi-next-btn:hover:not(.taxi-booking-btns .taxi-next-btn:nth-child(2)) {
+	background-color: var(--body-color);
+	border: 2px solid var(--first-color);
+}
+
+.booking-container {
+	row-gap: 2rem;
+	margin-bottom: 3rem;
+	margin-top: 4rem;
+}
+
+.taxi-next-btn i {
+	font-size: var(--larger-font-size);
+}
+
+.payment-taxi-details p {
+	font-weight: var(--font-semi-bold);
+	text-align: center;
+	font-size: var(--h2-font-size);
+}
+
+.payment-methods-taxi {
+	position: relative;
+	row-gap: 1.5rem;
+	margin-top: 1rem;
+}
+
+.payment-method {
+	border: 1px solid grey;
+	padding: 1.5rem 1rem;
+	display: flex;
+	flex-direction: column;
+	row-gap: 0.5rem;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 4px 4px 10px hsla(22, 100%, 8%, 0.1);
+	cursor: pointer;
+	transition: transform 0.3s ease-in, border-color 0.3s ease;
+}
+
+.payment-method:hover:not(.payment-method .payment-method-clicked) {
+	transform: scale(1.025);
+	border-color: var(--first-color);
+}
+
+/* .taxi-table tbody tr td:not(.taxi-table tbody tr td:nth-child(2)) {
+	text-align: center;
+} */
+
+.payment-method-clicked {
+	border-color: var(--first-color);
+	border-width: 2px;
+	position: relative;
+}
+
+.check-payment-tick {
+	display: none;
+}
+
+.payment-method-clicked .check-payment-tick {
+	background-color: white;
+	display: inline-block;
+	position: absolute;
+	width: 2rem;
+	bottom: -1rem;
+	z-index: 3;
+}
+
+.payment-method svg,
+.payment-method img {
+	width: 8rem;
+}
+
+.payment-method p {
+	font-weight: var(--font-semi-bold);
+	text-align: center;
+	font-size: var(--h2-font-size);
+}
+
+.summary-taxi-edit {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+
+.summary-taxi-edit h3 {
+	margin-bottom: 0;
+}
+
+.taxi-edit-btn {
+	padding: 0.5rem 1rem;
+	background-color: #a89c9c;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in, color 0.3s ease-in;
+	border-radius: 3rem;
+	text-align: center;
+	color: var(--body-color);
+	font-size: var(--small-font-size);
+	font-weight: var(--font-semi-bold);
+	letter-spacing: 6px;
+	/* width: 60%;
+	margin: 0 auto; */
+}
+
+.taxi-edit-btn:hover {
+	background-color: var(--subtitle-color);
+	color: var(--title-color);
+}

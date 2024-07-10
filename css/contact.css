@@ -1,0 +1,60 @@
+.enquery-socials {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	padding-block: 1rem;
+}
+
+.enquiry-social-icon svg {
+	width: 2rem;
+}
+
+.enquery-socials p {
+	font-family: var(--secondary-style);
+	letter-spacing: 2px;
+}
+
+.enquery-socials p:nth-child(2) {
+	font-weight: var(--font-semi-bold);
+	font-size: var(--large-font-size);
+	color: var(--title-color);
+}
+
+.enquiry-socials {
+	display: flex;
+	column-gap: 0.8rem;
+	margin-top: 0.5rem;
+}
+
+.enquiry-socials i {
+	color: var(--title-color);
+	font-size: var(--large-font-size);
+	font-family: var(--secondary-style);
+}
+
+.review-container {
+	margin: 0 auto;
+	margin-top: 2rem;
+}
+
+.taxi-next-btn{
+	position: relative;
+}
+
+.form-done {
+	position: absolute;
+	bottom: -2rem;
+	left: 0;
+}
+
+.error-info.success {
+	color: green;
+}
+.error-info.fail {
+	color: red;
+}
+.error-info span {
+	font-weight: 700;
+}

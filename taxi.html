@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./css/general.css" />
+		<link rel="stylesheet" href="./css/nav.css" />
+		<link rel="stylesheet" href="./css/intro.css" />
+		<link rel="stylesheet" href="./css/get-taxi.css" />
+		<link rel="stylesheet" href="./css/service.css" />
+		<link rel="stylesheet" href="./css/quotes.css" />
+		<link rel="stylesheet" href="./css/footer.css" />
+		<link rel="stylesheet" href="./css/safaris.css" />
+		<link rel="stylesheet" href="./css/safaris-num.css" />
+		<link rel="stylesheet" href="./css/car.css" />
+		<link rel="stylesheet" href="./css/taxi.css" />
+	</head>
+	<body>
+		<div class="main-container">
+			<header class="header is-visible">
+				<nav class="nav__bar">
+					<a class="nav__logo" href="#home">Andy Safaris</a>
+					<div class="nav__menu" id="js-nav-menu">
+						<ul class="nav__list">
+							<li><a href="#" class="nav__item">ABOUT US</a></li>
+							<li class="service-cont">
+								<a href="#" class="nav__item">SERVICES +</a>
+								<!-- <i class="ri-arrow-drop-down-line"></i> -->
+								<ul class="service-nav-breakdown">
+									<li><a href="#">SAFARIS</a></li>
+									<li><a href="#">NAIROBI-TOUR</a></li>
+									<li><a href="#">GET A TAXI</a></li>
+									<li><a href="#">CAR HIRE</a></li>
+								</ul>
+							</li>
+							<li><a href="#" class="nav__item">GALLERY</a></li>
+							<li><a href="#" class="nav__item">CONTACT US</a></li>
+						</ul>
+						<div class="nav__close" id="js-close-btn">
+							<i class="ri-close-line"></i>
+						</div>
+					</div>
+					<div class="contact__container">
+						<i class="ri-phone-fill phone__icon" id="js-phone-icon"></i>
+						<a href="#" class="nav__contact">+254 000 000 000</a>
+					</div>
+					<div class="nav__toogle" id="js-toogle-btn">
+						<i class="ri-apps-2-line"></i>
+					</div>
+				</nav>
+			</header>
+			<section class="taxi-header-bg" id="home">
+				<p class="animate-pop-in">GET A TAXI</p>
+			</section>
+			<section class="taxi-intro-sec">
+				<div class="progress-relative-cont">
+					<div class="taxi-larger-progress">
+						<div class="progress-larger progress-larger-selected">
+							<div data-progress-number="0" class="progres-cont">1</div>
+							<p>Enter Ride Details</p>
+						</div>
+						<div class="progress-larger">
+							<div data-progress-number="1" class="progres-cont">2</div>
+							<p>Choose a Vehicle</p>
+						</div>
+						<div class="progress-larger">
+							<div data-progress-number="2" class="progres-cont">3</div>
+							<p>Enter Contact Details</p>
+						</div>
+						<div class="progress-larger">
+							<div data-progress-number="3" class="progres-cont">4</div>
+							<p>Booking Summary</p>
+						</div>
+					</div>
+					<div class="backgroud-progress"></div>
+				</div>
+				<div class="taxi-book-progres">
+					<select class="select-options" name="" id="">
+						<option value="0">Enter Ride Details</option>
+						<option value="1">Choose A Taxi</option>
+						<option value="2">Enter Contract Details</option>
+						<option value="3">Booking Summary</option>
+					</select>
+				</div>
+				<div class="booking-container grid">
+					<div class="ride-details">
+						<p class="progress-title">RIDE DETAIL</p>
+						<form action="" class="ride-details-form">
+							<div class="date-input-container">
+								<label for="pickupDay">
+									PICKUP DATE
+									<i class="ri-question-fill"></i>
+								</label>
+								<input
+									type="date"
+									name="pickupDay"
+									id="date"
+									placeholder="Enter a date"
+								/>
+								<div class="error-message">
+									<p></p>
+								</div>
+							</div>
+							<div class="date-input-container">
+								<label for="pickupTime">
+									PICKUP TIME
+									<i class="ri-question-fill"></i>
+								</label>
+								<input
+									type="time"
+									name="pickupTime"
+									id="pickupTime"
+									placeholder="Enter pick up time"
+								/>
+								<div class="error-message">
+									<p></p>
+								</div>
+							</div>
+							<div class="date-input-container">
+								<label for="pickupLocation">
+									PICKUP LOCATION
+									<i class="ri-question-fill"></i>
+								</label>
+								<input
+									type="text"
+									name="pickupLocation"
+									id="pickup-location"
+									placeholder="Enter a location"
+								/>
+								<div class="error-message">
+									<p></p>
+								</div>
+							</div>
+							<div class="date-input-container">
+								<label for="dropoffLocation">
+									DROP-OFF LOCATION
+									<i class="ri-question-fill"></i>
+								</label>
+								<input
+									type="text"
+									name="dropoffLocation"
+									id="dropoff-location"
+									placeholder="Enter a location"
+								/>
+								<div class="error-message">
+									<p></p>
+								</div>
+							</div>
+							<div class="date-input-container inner-select">
+								<label for="transferType">
+									TRANSFER TYPE
+									<i class="ri-question-fill"></i>
+								</label>
+								<select
+									class="select-options inner-select-option"
+									name="transferType"
+									id="transferType"
+								>
+									<option value="one-way">ONE WAY</option>
+									<option value="two-way">TWO WAY</option>
+								</select>
+							</div>
+						</form>
+					</div>
+					<div>
+						<div class="map" id="map"></div>
+						<div class="map-details">
+							<div class="total-detail">
+								<svg
+									class="section-animal-logo"
+									viewBox="0 0 100 100"
+									xmlns="http://www.w3.org/2000/svg"
+									xmlns:xlink="http://www.w3.org/1999/xlink"
+									aria-hidden="true"
+									role="img"
+									class="iconify iconify--gis"
+									preserveAspectRatio="xMidYMid meet"
+								>
+									<path
+										d="M21 32C9.459 32 0 41.43 0 52.94c0 4.46 1.424 8.605 3.835 12.012l14.603 25.244c2.045 2.672 3.405 2.165 5.106-.14l16.106-27.41c.325-.59.58-1.216.803-1.856A20.668 20.668 0 0 0 42 52.94C42 41.43 32.544 32 21 32zm0 9.812c6.216 0 11.16 4.931 11.16 11.129c0 6.198-4.944 11.127-11.16 11.127c-6.215 0-11.16-4.93-11.16-11.127c0-6.198 4.945-11.129 11.16-11.129z"
+										fill="var(--first-color)"
+									></path>
+									<path
+										d="M87.75 0C81.018 0 75.5 5.501 75.5 12.216c0 2.601.83 5.019 2.237 7.006l8.519 14.726c1.193 1.558 1.986 1.262 2.978-.082l9.395-15.99c.19-.343.339-.708.468-1.082a12.05 12.05 0 0 0 .903-4.578C100 5.5 94.484 0 87.75 0zm0 5.724c3.626 0 6.51 2.876 6.51 6.492c0 3.615-2.884 6.49-6.51 6.49c-3.625 0-6.51-2.875-6.51-6.49c0-3.616 2.885-6.492 6.51-6.492z"
+										fill="var(--first-color)"
+									></path>
+									<path
+										d="M88.209 37.412c-2.247.05-4.5.145-6.757.312l.348 5.532a126.32 126.32 0 0 1 6.513-.303zm-11.975.82c-3.47.431-6.97 1.045-10.43 2.032l1.303 5.361c3.144-.896 6.402-1.475 9.711-1.886zM60.623 42.12a24.52 24.52 0 0 0-3.004 1.583l-.004.005l-.006.002c-1.375.866-2.824 1.965-4.007 3.562c-.857 1.157-1.558 2.62-1.722 4.35l5.095.565c.038-.406.246-.942.62-1.446h.002v-.002c.603-.816 1.507-1.557 2.582-2.235l.004-.002a19.64 19.64 0 0 1 2.388-1.256zM58 54.655l-3.303 4.235c.783.716 1.604 1.266 2.397 1.726l.01.005l.01.006c2.632 1.497 5.346 2.342 7.862 3.144l1.446-5.318c-2.515-.802-4.886-1.576-6.918-2.73c-.582-.338-1.092-.691-1.504-1.068zm13.335 5.294l-1.412 5.327l.668.208l.82.262c2.714.883 5.314 1.826 7.638 3.131l2.358-4.92c-2.81-1.579-5.727-2.611-8.538-3.525l-.008-.002l-.842-.269zm14.867 7.7l-3.623 3.92c.856.927 1.497 2.042 1.809 3.194l.002.006l.002.009c.372 1.345.373 2.927.082 4.525l5.024 1.072c.41-2.256.476-4.733-.198-7.178c-.587-2.162-1.707-4.04-3.098-5.548zM82.72 82.643a11.84 11.84 0 0 1-1.826 1.572h-.002c-1.8 1.266-3.888 2.22-6.106 3.04l1.654 5.244c2.426-.897 4.917-1.997 7.245-3.635l.006-.005l.003-.002a16.95 16.95 0 0 0 2.639-2.287zm-12.64 6.089c-3.213.864-6.497 1.522-9.821 2.08l.784 5.479c3.421-.575 6.856-1.262 10.27-2.18zm-14.822 2.836c-3.346.457-6.71.83-10.084 1.148l.442 5.522c3.426-.322 6.858-.701 10.285-1.17zm-15.155 1.583c-3.381.268-6.77.486-10.162.67l.256 5.536c3.425-.185 6.853-.406 10.28-.678zm-15.259.92c-2.033.095-4.071.173-6.114.245l.168 5.541a560.1 560.1 0 0 0 6.166-.246z"
+										fill="#000000"
+										fill-rule="evenodd"
+									></path>
+								</svg>
+								<p class="map-detail-title">TOTAL DISTANCE</p>
+								<p class="map-detail-value" id="total-distance">0 km</p>
+							</div>
+							<div class="total-detail">
+								<svg
+									class="section-animal-logo"
+									viewBox="0 0 24 24"
+									fill="var(--subtitle-color)"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z"
+										stroke="#000000"
+										stroke-width="1.5"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/>
+									<path
+										d="M12 6V12"
+										stroke="#000000"
+										stroke-width="1.5"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/>
+									<path
+										d="M16.24 16.24L12 12"
+										stroke="#000000"
+										stroke-width="1.5"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/>
+								</svg>
+								<p class="map-detail-title">TOTAL TIME</p>
+								<p class="map-detail-value" id="total-time">0h 0m</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="btn-sections">
+					<div class="taxi-next-btn taxi-btn taxi-btn-right">
+						CHOOSE A VEHICLE
+						<i class="ri-arrow-right-s-line"></i>
+					</div>
+				</div>
+			</section>
+			<section class="car-hire-rates grid">
+				<svg
+					class="section-animal-logo"
+					fill="var(--subtitle-color)"
+					version="1.1"
+					id="Capa_1"
+					xmlns="http://www.w3.org/2000/svg"
+					xmlns:xlink="http://www.w3.org/1999/xlink"
+					width="800px"
+					height="800px"
+					viewBox="0 0 444.103 444.103"
+					xml:space="preserve"
+				>
+					<g>
+						<path
+							d="M0,219.744v48.098c0,8.301,6.729,15.03,15.03,15.03h40.208c7.529,19.854,26.738,34.011,49.199,34.011
+		c22.462,0,41.671-14.155,49.2-34.011h144.848c7.53,19.854,26.738,34.011,49.2,34.011s41.671-14.155,49.2-34.011h15.776
+		c18.779,0,27.955-8.109,30.259-15.723c5.828-19.267-11.758-53.979-12.028-54.314c-2.421-3.013-5.909-4.977-9.74-5.485
+		l-92.863-16.828c0,0-52.394-50.088-83.468-50.088l-18.642,0.007l-4.748-8.705c-1.519-2.784-4.437-4.516-7.607-4.516h-41.212
+		c-3.172,0-6.09,1.732-7.608,4.516l-4.761,8.729l-20.136,0.007c-20.302,0-37.269,15.47-56.915,33.382
+		c-9.257,8.44-19.478,17.729-30.751,25.99l-41.981,5.583C4.395,207.361,0,213.037,0,219.744z M327.645,264.278
+		c0-11.052,8.99-20.041,20.041-20.041s20.041,8.989,20.041,20.041c0,11.051-8.99,20.041-20.041,20.041
+		S327.645,275.327,327.645,264.278z M233.752,233.877h23.4v-23.399h23.398v23.399h-23.398v23.399h-23.4V233.877z M210.352,210.477
+		h23.399v23.399h-23.399V210.477z M163.553,210.477h23.399v23.399h23.4v23.398h-23.4v-23.398h-23.399V210.477L163.553,210.477z
+		 M84.397,264.278c0-11.052,8.991-20.041,20.041-20.041c11.051,0,20.041,8.989,20.041,20.041c0,11.051-8.99,20.041-20.041,20.041
+		C93.388,284.317,84.397,275.327,84.397,264.278z"
+						/>
+					</g>
+				</svg>
+				<p class="section-subtitle">Taxi Rates</p>
+				<p class="section-title car-rates-title">
+					Transfer Rates from JKIA Airport
+				</p>
+				<div class="tables-car-container grid">
+					<div class="car-rate-cont">
+						<p></p>
+						<table class="taxi-table">
+							<thead>
+								<tr>
+									<th>AREA</th>
+									<th>Destinations(Including Adjacent Areas)</th>
+									<th>Saloon(Incl. VAT)</th>
+									<th>VAN(Incl. VAT)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Area 1(Under 30KMs)</td>
+									<td class="taxi-destination">
+										Cabanas, Pipeline, Fedha, Agri Seed, Umoja, BururBuru,
+										Donholm and SGR
+									</td>
+									<td>$24</td>
+									<td>$26</td>
+								</tr>
+								<tr>
+									<td>Area 1(Under 30KMs)</td>
+									<td>
+										Cabanas, Pipeline, Fedha, Agri Seed, Umoja, BururBuru,
+										Donholm and SGR
+									</td>
+									<td>$24</td>
+									<td>$26</td>
+								</tr>
+								<tr>
+									<td>Area 1(Under 30KMs)</td>
+									<td>
+										Cabanas, Pipeline, Fedha, Agri Seed, Umoja, BururBuru,
+										Donholm and SGR
+									</td>
+									<td>$24</td>
+									<td>$26</td>
+								</tr>
+								<tr>
+									<td>Area 1(Under 30KMs)</td>
+									<td>
+										Cabanas, Pipeline, Fedha, Agri Seed, Umoja, BururBuru,
+										Donholm and SGR
+									</td>
+									<td>$24</td>
+									<td>$26</td>
+								</tr>
+								<tr>
+									<td>Area 1(Under 30KMs)</td>
+									<td>
+										Cabanas, Pipeline, Fedha, Agri Seed, Umoja, BururBuru,
+										Donholm and SGR
+									</td>
+									<td>$24</td>
+									<td>$26</td>
+								</tr>
+								<tr>
+									<td>Area 1(Under 30KMs)</td>
+									<td>
+										Cabanas, Pipeline, Fedha, Agri Seed, Umoja, BururBuru,
+										Donholm and SGR
+									</td>
+									<td>$24</td>
+									<td>$26</td>
+								</tr>
+								<tr>
+									<td>Area 1(Under 30KMs)</td>
+									<td>
+										Cabanas, Pipeline, Fedha, Agri Seed, Umoja, BururBuru,
+										Donholm and SGR
+									</td>
+									<td>$24</td>
+									<td>$26</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</section>
+			<section class="section-questions">
+				<svg
+					class="section-animal-logo"
+					fill="var(--title-color)"
+					version="1.1"
+					id="Capa_1"
+					xmlns="http://www.w3.org/2000/svg"
+					xmlns:xlink="http://www.w3.org/1999/xlink"
+					width="800px"
+					height="800px"
+					viewBox="0 0 444.103 444.103"
+					xml:space="preserve"
+				>
+					<g>
+						<path
+							d="M0,219.744v48.098c0,8.301,6.729,15.03,15.03,15.03h40.208c7.529,19.854,26.738,34.011,49.199,34.011
+		c22.462,0,41.671-14.155,49.2-34.011h144.848c7.53,19.854,26.738,34.011,49.2,34.011s41.671-14.155,49.2-34.011h15.776
+		c18.779,0,27.955-8.109,30.259-15.723c5.828-19.267-11.758-53.979-12.028-54.314c-2.421-3.013-5.909-4.977-9.74-5.485
+		l-92.863-16.828c0,0-52.394-50.088-83.468-50.088l-18.642,0.007l-4.748-8.705c-1.519-2.784-4.437-4.516-7.607-4.516h-41.212
+		c-3.172,0-6.09,1.732-7.608,4.516l-4.761,8.729l-20.136,0.007c-20.302,0-37.269,15.47-56.915,33.382
+		c-9.257,8.44-19.478,17.729-30.751,25.99l-41.981,5.583C4.395,207.361,0,213.037,0,219.744z M327.645,264.278
+		c0-11.052,8.99-20.041,20.041-20.041s20.041,8.989,20.041,20.041c0,11.051-8.99,20.041-20.041,20.041
+		S327.645,275.327,327.645,264.278z M233.752,233.877h23.4v-23.399h23.398v23.399h-23.398v23.399h-23.4V233.877z M210.352,210.477
+		h23.399v23.399h-23.399V210.477z M163.553,210.477h23.399v23.399h23.4v23.398h-23.4v-23.398h-23.399V210.477L163.553,210.477z
+		 M84.397,264.278c0-11.052,8.991-20.041,20.041-20.041c11.051,0,20.041,8.989,20.041,20.041c0,11.051-8.99,20.041-20.041,20.041
+		C93.388,284.317,84.397,275.327,84.397,264.278z"
+						/>
+					</g>
+				</svg>
+				<div class="section-subtitle">Taxi Q&A</div>
+				<div class="section-title">General Questions</div>
+				<div class="question-section-center">
+					<article class="question">
+						<div class="question-title">
+							<p>Do yo accept all major credit cards</p>
+							<button type="button" class="question-btn">
+								<span class="plus-icon">
+									<i class="ri-add-box-line"></i>
+								</span>
+								<span class="minus-icon">
+									<i class="ri-checkbox-indeterminate-line"></i>
+								</span>
+							</button>
+						</div>
+						<hr class="question-underline" />
+						<div class="question-text">
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+								reiciendis recusandae praesentium exercitationem assumenda
+								voluptas quas ea obcaecati harum nisi?
+							</p>
+						</div>
+					</article>
+					<article class="question">
+						<div class="question-title">
+							<p>Do yo accept all major credit cards</p>
+							<button type="button" class="question-btn">
+								<span class="plus-icon">
+									<i class="ri-add-box-line"></i>
+								</span>
+								<span class="minus-icon">
+									<i class="ri-checkbox-indeterminate-line"></i>
+								</span>
+							</button>
+						</div>
+						<hr class="question-underline" />
+						<div class="question-text">
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+								reiciendis recusandae praesentium exercitationem assumenda
+								voluptas quas ea obcaecati harum nisi?
+							</p>
+						</div>
+					</article>
+					<article class="question">
+						<div class="question-title">
+							<p>Do yo accept all major credit cards</p>
+							<button type="button" class="question-btn">
+								<span class="plus-icon">
+									<i class="ri-add-box-line"></i>
+								</span>
+								<span class="minus-icon">
+									<i class="ri-checkbox-indeterminate-line"></i>
+								</span>
+							</button>
+						</div>
+						<hr class="question-underline" />
+						<div class="question-text">
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+								reiciendis recusandae praesentium exercitationem assumenda
+								voluptas quas ea obcaecati harum nisi?
+							</p>
+						</div>
+					</article>
+				</div>
+			</section>
+			<footer class="footer">
+				<a href="#home" class="back-top"
+					><div>
+						<i class="ri-arrow-up-s-line"></i></div
+				></a>
+				<div class="footer-content">
+					<div class="footer_about-us">
+						<p class="section-title footer-title">ABOUT US</p>
+						<p class="footer-about-us">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+							nam velit cum alias magni laboriosam eaque doloremque, doloribus
+							non
+						</p>
+						<div class="footer-socials">
+							<i class="ri-twitter-x-fill"></i>
+							<i class="ri-facebook-fill"></i>
+							<i class="ri-instagram-line"></i>
+							<i class="ri-whatsapp-line"></i>
+						</div>
+					</div>
+					<!-- <div class="footer_explore"></div> -->
+					<div class="footer_contact-info">
+						<p class="section-title footer-title">CONTACT US</p>
+						<p class="footer-address"><span>Address: </span>Some Address</p>
+						<div class="footer-contacts">
+							<i class="ri-phone-fill"></i>
+							254718750145
+						</div>
+						<div class="footer-contacts">
+							<i class="ri-mail-fill"></i>
+							emiliocliff@gmail.com
+						</div>
+					</div>
+				</div>
+				<div class="footer_rights">
+					Copyright @2024 By <span>TOUR</span> All Rights Reserved
+				</div>
+			</footer>
+		</div>
+		<!-- prettier-ignore -->
+		<!-- <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+				({key: "AIzaSyD8Ij4EZwonOnh4ck32fK2EMSHkYutFTL0", v: "weekly"});</script> -->
+		<script src="./js/q&a.js"></script>
+		<script src="./js/nav.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8Ij4EZwonOnh4ck32fK2EMSHkYutFTL0&libraries=places"></script>
+		<script src="./js/taxi-maps.js" type="module"></script>
+		<script src="./js/taxi.js" type="module"></script>
+		<script>
+			document.body.classList.add("js-loading");
+
+			window.addEventListener("load", showPage, false);
+			function showPage() {
+				document.body.classList.remove("js-loading");
+				document.body.classList.add("js-loaded");
+			}
+		</script>
+	</body>
+</html>

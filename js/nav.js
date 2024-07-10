@@ -20,10 +20,57 @@ if (closeBtn) {
 let scroll =
 	window.requestAnimationFrame ||
 	function (callback) {
-		window.setTimeout(callback, 1000 / 60);
+		window.setTimeout(callback, 10000000 / 60);
 	};
 
-let getTaxi = document.querySelector(".js-active");
+function onScroll() {
+	let header = document.querySelector(".header");
+	if (window.scrollY >= 100) {
+		header.classList.add("is-visible");
+	} else {
+		header.classList.remove("is-visible");
+	}
+}
+
+let ticking = false;
+
+function handleScroll() {
+	if (!ticking) {
+		window.requestAnimationFrame(() => {
+			onScroll();
+			ticking = false;
+		});
+		ticking = true;
+	}
+}
+
+window.addEventListener("scroll", handleScroll);
+
+onScroll();
+
+// const serviceCont = document.querySelector(".service-cont");
+// const serviceNavBreakdown = document.querySelector(".service-nav-breakdown");
+
+// serviceCont.addEventListener("mouseenter", function () {
+// 	serviceNavBreakdown.style.display = "block";
+// });
+
+// serviceCont.addEventListener("mouseleave", function (event) {
+// 	if (!serviceCont.contains(event.relatedTarget)) {
+// 		serviceNavBreakdown.style.display = "none";
+// 	}
+// });
+
+// serviceNavBreakdown.addEventListener("mouseenter", function () {
+// 	this.style.display = "block";
+// });
+
+// serviceNavBreakdown.addEventListener("mouseleave", function () {
+// 	this.style.display = "none";
+// });
+
+/*
+	let getTaxi = document.querySelector(".js-active");
 function loop() {
 	let header = document.querySelector(".header");
 	const carousel = document.querySelector(".intro__section");
@@ -35,6 +82,22 @@ function loop() {
 		}
 	}
 
+	scroll(loop);
+}
+
+loop();
+
+MINE
+
+function loop() {
+	let header = document.querySelector(".header");
+	if (window.scrollY >= 100) {
+		header.classList.add("is-visible");
+	} else {
+		header.classList.remove("is-visible");
+	}
+
+	console.log("scrollling");
 	scroll(loop);
 }
 
@@ -53,9 +116,10 @@ function isElementInViewport(el) {
 		rect.left >= 0 &&
 		rect.bottom <=
 			(window.innerHeight ||
-				document.documentElement.clientHeight) /* or $(window).height() */ &&
+				document.documentElement.clientHeight) &&
 		rect.right <=
 			(window.innerWidth ||
-				document.documentElement.clientWidth) /* or $(window).width() */
+				document.documentElement.clientWidth) 
 	);
 }
+*/

@@ -1,0 +1,335 @@
+.safari-num-intro {
+	text-align: center;
+}
+
+/* .safari-day-breakdown {
+	display: grid;
+	row-gap: 6rem;
+} */
+
+/* .safari-day-breakdown p:not(.safari-day-breakdown p:nth-child(1)) {
+	margin-top: 3rem;
+} */
+
+/* .safari-day {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	column-gap: 2rem;
+} */
+
+.safari-card-item {
+	flex: 1;
+}
+
+/* .safari-day-title {
+	position: absolute;
+	top: -2rem;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: var(--secondary-style);
+	color: var(--title-color);
+	text-align: center;
+	font-size: var(--large-font-size);
+	font-weight: var(--font-bold);
+} */
+
+/* .safari-day-card {
+	display: grid;
+} */
+
+.safari-day-card-img {
+	width: 100%;
+	height: 320px;
+	object-fit: cover;
+}
+
+.safari-day-card-des {
+	margin-top: 0.5rem;
+	font-size: var(--h4-font-size);
+}
+
+/* .safari-num-btn {
+	margin-top: 0.5rem;
+	width: 50%;
+	justify-self: center;
+	cursor: pointer;
+	text-align: center;
+	margin: 0 auto;
+} */
+
+/* .safari-day-accom {
+	background-color: var(--first-color);
+	margin-block: 3rem 0rem;
+	display: grid;
+	padding: 2rem 1.5rem 1rem 1.5rem;
+} */
+
+.safari-num-details {
+	display: grid;
+	/* grid-template-columns: repeat(2, 1fr); */
+	row-gap: 2rem;
+}
+
+.safari-section-tit {
+	margin-bottom: 0;
+}
+
+/* .safari-num-addition div {
+	text-align: center;
+} */
+/* .safari-num-addition p span {
+	font-size: var(--h2-font-size);
+	font-weight: var(--font-semi-bold);
+	margin-bottom: 0.5rem;
+	color: var(--title-color);
+	text-decoration: underline;
+} */
+/* .safari-num-addition p {
+	margin-bottom: 0.5rem;
+	margin-bottom: 2rem;
+} */
+
+/* .safari-num-fees-break p, */
+.safari-num-break-down p {
+	text-decoration: underline;
+	text-align: center;
+	font-weight: var(--font-semi-bold);
+	margin-top: 3rem;
+	color: var(--title-color);
+}
+
+.safari-section-sub {
+	color: var(--body-color);
+}
+
+/* .safari-div-cont {
+	display: grid;
+} */
+
+.safari__list-groups,
+.list__group {
+	display: grid;
+}
+
+.safari__list-groups {
+	grid-template-columns: repeat(2, max-content);
+	column-gap: 4rem;
+	justify-content: center;
+	align-items: baseline;
+	/* justify-self: center; */
+}
+
+.list__group {
+	row-gap: 0.5rem;
+	/* margin: 0 auto; */
+	/* justify-self: center; */
+}
+
+/* .safari-num-fees-break ul li, */
+/* .list__group li {
+	font-weight: var(--font-semi-bold);
+} */
+
+.safari-num-addition {
+	margin-top: 3rem;
+}
+
+/* ======================== ADDITIONAL PRICE ======================= */
+.price-table-cont {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+.table-wrapper-car {
+	width: 100%;
+	display: flex;
+	overflow: hidden;
+}
+
+/* .price-grab {
+	display: flex;
+	column-gap: 0.5rem;
+	width: calc(300% + 1rem);
+	transition: transform 0.3s ease-in-out;
+} */
+
+.price-grab table {
+	width: 100%;
+	flex: 0 0 calc(100% - 0.3333rem);
+	table-layout: fixed;
+}
+
+/* .price-table-cont h1 {
+	font-size: var(--h3-font-size);
+} */
+
+/* .accomo-sect-1 h2,
+.price-table-cont h2 {
+	font-size: var(--h4-font-size);
+	opacity: 0.7;
+} */
+
+.price-table-cont hr {
+	margin-block: 0.5rem 2rem;
+}
+
+.safari-price-table thead {
+	background-color: var(--title-color);
+	color: var(--body-color);
+	font-weight: var(--font-semi-bold);
+}
+
+/* .safari-price-table thead td {
+	border: 1px solid var(--title-color);
+	padding: 0.8rem 0.5rem;
+	text-align: center;
+} */
+
+.safari-price-table thead td:nth-child(1) {
+	text-align: start;
+}
+
+/* .safari-price-table tbody td {
+	border: 1px solid var(--title-color);
+	padding: 0.25rem 0.5rem;
+} */
+
+.safari-price-table tbody td span {
+	color: red;
+	font-weight: var(--font-bold);
+}
+
+.safari-price-table:active {
+	cursor: grabbing;
+}
+
+.table-pips {
+	display: flex;
+	margin-block: 1.5rem 0.5rem;
+	justify-content: center;
+	column-gap: 0.3rem;
+}
+
+.table-pip {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	border: 1px solid var(--title-color);
+	background-color: var(--body-color);
+	transform: scale(0.8);
+	cursor: pointer;
+	transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+.table-pip:hover {
+	transform: scale(1);
+}
+
+.table-pip.active {
+	background-color: var(--title-color);
+	transform: scale(1);
+}
+
+/* =================== ADDITIONAL ================= */
+
+/* .safari-accomodation-sec {
+	font-weight: var(--font-semi-bold);
+	margin-top: 3rem;
+	background-image: linear-gradient(to bottom, white 10%, transparent),
+		url(../images/keyur-nandaniya-vu0gvM5he8o-unsplash.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding-inline: 1.5rem;
+	padding-bottom: 3rem;
+} */
+
+.accomo-sect-1 {
+	margin-top: -1.5rem;
+}
+
+.accomo-sect-1 h1 {
+	letter-spacing: 3px;
+}
+
+.underline {
+	margin-block: 0.25rem 1rem;
+	width: 100%;
+	height: 3px;
+	background-color: rgb(179, 161, 161);
+	position: relative;
+}
+
+.above-underline {
+	position: absolute;
+	left: 0;
+	top: -1px;
+	bottom: -1px;
+	width: 45%;
+	background-color: green;
+	border-inline: 7px solid yellow;
+}
+
+/* .accomodation-options {
+	display: flex;
+	justify-content: start;
+	column-gap: 0.5rem;
+}
+
+.accomodation-option {
+	background-color: rgb(145, 50, 12);
+	transform: skew(-20deg);
+	padding: 0.25rem 0.8rem;
+	color: var(--body-color);
+	font-weight: var(--font-semi-bold);
+	font-size: var(--normal-font-size);
+	cursor: pointer;
+} */
+
+.accomodation-option.option-active {
+	background-color: var(--subtitle-color);
+}
+
+.accomodation-list {
+	margin-top: -0.05rem;
+	margin-left: -0.4rem;
+	border: 1px solid grey;
+	margin-bottom: 2rem;
+}
+
+.accomodation-list ul {
+	padding-left: 2rem;
+	list-style: square;
+}
+
+.tour-breakdown h1 span {
+	font-weight: var(--font-bold);
+}
+
+/* .tour-breakdown li {
+	display: flex;
+	column-gap: 0.5rem;
+	align-items: center;
+	margin-bottom: 0.3rem;
+} */
+
+.tour-breakdown li i {
+	padding-top: 0.2rem;
+	align-self: baseline;
+}
+
+/* .safari-not-included {
+	padding-inline: 1.5rem;
+	background-color: rgb(241, 230, 230);
+} */
+
+.safari-not-included h3 {
+	font-weight: var(--font-bold);
+}
+
+.safari-not-included ul {
+	padding-left: 1.5rem;
+	list-style: circle;
+}

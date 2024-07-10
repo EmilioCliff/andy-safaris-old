@@ -1,0 +1,367 @@
+.service-nairobi-bg,
+.service-header-bg {
+	height: 70vh;
+	overflow: hidden;
+	color: var(--subtitle-color);
+	position: relative;
+}
+
+.service-header-bg::before {
+	/* animation: fade-slide-down 2s 0.5s cubic-bezier(0, 0.5, 0, 1) forwards; */
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),
+		url(../images/giraffe1.jpg) no-repeat center;
+	background-size: cover;
+	content: "";
+	opacity: 1;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -2;
+}
+
+.service-nairobi-bg::before {
+	/* animation: fade-slide-down 2s 0.5s cubic-bezier(0, 0.5, 0, 1) forwards; */
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),
+		url(../images/nairobi-image-2.jpg) no-repeat center;
+	background-size: cover;
+	content: "";
+	opacity: 1;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -2;
+}
+
+@keyframes fade-slide-down {
+	0% {
+		opacity: 0;
+		transform: translateY(-4rem);
+	}
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+.service-nairobi-bg p,
+.service-header-bg p {
+	text-align: center;
+	width: 70%;
+	position: absolute;
+	top: 75%;
+	left: 50%;
+	/* font-size: 2.5rem; */
+	font-weight: var(--font-semi-bold);
+}
+
+.animate-pop-in {
+	opacity: 1;
+	transform: translate(-50%, -50%);
+	/* animation: pop-in 0.8s 1s cubic-bezier(0, 0.9, 0.3, 1.2) forwards; */
+}
+
+@keyframes pop-in {
+	0% {
+		opacity: 0;
+		transform: translate(-50%, -80%) scale(0.8);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(-50%, -50%);
+	}
+}
+
+/* .safari-intro {
+	margin-block: 2rem 1rem;
+	display: grid;
+	opacity: 0;
+	padding-inline: 1.5rem;
+	animation: slide-in 2s 0.5s cubic-bezier(0, 0.5, 0, 1) forwards;
+} */
+
+.animate-slide-in {
+	opacity: 1;
+	/* animation: slide-in 0.8s 1s cubic-bezier(0, 0.9, 0.3, 1.2) forwards; */
+}
+
+@keyframes slide-in {
+	0% {
+		opacity: 0;
+		transform: translateY(4rem);
+	}
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+.section-animal-logo {
+	width: 4rem;
+	height: 3rem;
+	justify-self: center;
+}
+
+/* .safari-section-sub {
+	margin-block: 0.25rem 0.8rem;
+} */
+
+/* .safari-description {
+	font-weight: var(--font-semi-bold);
+} */
+
+/* .safaris-grid-section {
+	margin-block: 4rem 1rem;
+	padding-inline: 1.5rem;
+} */
+
+/* .days-selection {
+	margin-bottom: 1.5rem;
+	text-align: center;
+	font-family: var(--secondary-style);
+	font-weight: var(--font-medium);
+} */
+
+.days-options {
+	width: 80%;
+	height: 0.5rem;
+	background-color: #d0d9e4;
+	border-radius: 0.5rem;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.day {
+	height: 100%;
+	width: 0.5rem;
+	border-radius: 50%;
+	background-color: #eee;
+	cursor: pointer;
+}
+
+.day-selected {
+	border: 1px solid blue;
+	transform: scale(1.8);
+}
+
+.day:hover {
+	border: 1px solid blue;
+	transform: scale(1.8);
+}
+
+/* .day-number {
+	margin-top: 0.5rem;
+	font-size: var(--h3-font-size);
+} */
+
+/* .show-all {
+	width: 9rem;
+	margin: 0 auto;
+	margin-top: 4rem;
+	cursor: pointer;
+} */
+
+/* .safaris-grid {
+	display: grid;
+	margin-block: 2rem 1rem;
+	row-gap: 2.5rem;
+} */
+
+/* .safari-option {
+	text-align: center;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	box-shadow: 0 8px 24px hsla(22, 100%, 8%, 0.2);
+} */
+
+.safari-image {
+	width: 100%;
+	height: 320px;
+	object-fit: cover;
+}
+
+/* .safari-card-title {
+	font-size: var(--h1-font-size);
+	margin-bottom: 0.8rem;
+	text-transform: uppercase;
+} */
+/* .safari-card-description {
+	text-align: start;
+	padding-inline: 0.5rem;
+	opacity: 0.6;
+} */
+
+/* .safari-learn-more {
+	width: 40%;
+	margin: 0 auto;
+	margin-block: 0.5rem 0.8rem;
+	cursor: pointer;
+} */
+
+/* ============= Q&A ============= */
+/* .section-questions {
+	margin-block: 4rem 1rem;
+	padding-inline: 1.5rem;
+	display: grid;
+} */
+
+.question-section-center {
+	display: grid;
+	row-gap: 1.25rem;
+}
+
+/* .question {
+	padding: 0.5rem;
+	display: grid;
+	row-gap: 1rem;
+	box-shadow: 2px 8px 30px hsla(22, 100%, 8%, 0.1);
+} */
+
+.question-title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	column-gap: .5rem;
+}
+
+.question-title p {
+	font-family: var(--secondary-style);
+	font-weight: var(--font-semi-bold);
+}
+
+.question-btn {
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+}
+
+.plus-icon,
+.minus-icon {
+	font-size: var(--h2-font-size);
+	cursor: pointer;
+	transition: transform 0.5s ease;
+}
+
+.plus-icon:hover,
+.minus-icon:hover {
+	transform: rotate(90deg);
+}
+
+.question-text {
+	opacity: 0.8;
+	color: var(--title-color);
+	display: none;
+}
+
+.question-underline {
+	display: none;
+}
+
+.show-text .question-text {
+	display: block;
+}
+
+.show-text .question-underline {
+	display: block;
+}
+.minus-icon {
+	display: none;
+}
+
+.show-text .minus-icon {
+	display: inline;
+}
+
+.show-text .plus-icon {
+	display: none;
+}
+
+/* ============== ADDITIONAL ================= */
+/* .safari-button-group {
+	display: flex;
+	justify-content: space-between;
+} */
+
+.safari-button-group-modal div:nth-child(1),
+.safari-button-group div:nth-child(1) {
+	background: transparent;
+	border: 1px solid black;
+	color: var(--title-color);
+	font-weight: var(--font-semi-bold);
+}
+
+/* .quick-view-overlay {
+	position: fixed;
+	top: -50rem;
+	left: 0;
+	right: 0;
+	height: 100vh;
+	padding-inline: 1.5rem;
+	background-color: rgba(0, 0, 0, 0.7);
+	overflow: auto;
+	z-index: 50;
+} */
+
+.quick-view-overlay::-webkit-scrollbar {
+	width: 0;
+}
+
+.quick-view-container {
+	margin: 8rem auto;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: white;
+	color: black;
+	text-align: start;
+	padding: 2.8rem 1rem 0.6rem 1rem;
+}
+
+.close-quick-view {
+	position: absolute;
+	top: 0.6rem;
+	right: 1rem;
+	padding: 0.1rem 0.25rem;
+	font-weight: var(--font-semi-bold);
+	cursor: pointer;
+}
+.quick-view-des p {
+	font-weight: var(--font-semi-bold);
+}
+
+.quick-view-des ul {
+	padding-left: 2rem;
+	margin-bottom: 0.5rem;
+	list-style: square;
+}
+
+/* .quick-view-des .section-title {
+	font-size: var(--normal-font-size);
+	text-align: start;
+} */
+
+.quick-view-pricing {
+	font-weight: var(--font-light);
+}
+
+.quick-view-pricing span {
+	color: rgb(27, 189, 27);
+	font-size: var(--large-font-size);
+}
+
+/* .safari-button-group-modal {
+	display: flex;
+	flex-direction: column;
+	margin-top: 1.5rem;
+} */
+
+/* .safari-button-group-modal div {
+	font-size: var(--h3-font-size);
+	margin-block: 0.5rem 0.8rem;
+	cursor: pointer;
+	text-align: center;
+} */

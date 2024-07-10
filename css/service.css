@@ -20,7 +20,7 @@
 }
 
 .service-button {
-	padding: 0.5rem 1rem;
+	padding: 0.5rem .25rem;
 	text-align: center;
 	border: 1px solid rgb(177, 177, 177);
 	font-style: var(--secondary-style);
@@ -54,7 +54,7 @@
 
 	.service-content img {
 		width: 100%;
-		height: 200px;
+		height: 300px;
 		object-fit: cover;
 	}
 
@@ -92,6 +92,462 @@
 		box-shadow: 6px 10px 20px rgba(0, 0, 0, 0.3);
 		background-color: var(--first-color);
 	}
+
+	.safari-intro {
+		margin-block: 2rem 1rem;
+		display: grid;
+		opacity: 1;
+		padding-inline: 1.5rem;
+		/* animation: slide-in 2s 0.5s cubic-bezier(0, 0.5, 0, 1) forwards; */
+	}
+
+	.safari-section-sub {
+		margin-block: 0.25rem 0.8rem;
+	}
+
+	.safari-description {
+		font-weight: var(--font-semi-bold);
+	}
+
+	.safaris-grid-section {
+		margin-block: 4rem 1rem;
+		padding-inline: 1.5rem;
+	}
+
+	.days-selection {
+		margin-bottom: 1.5rem;
+		text-align: center;
+		font-family: var(--secondary-style);
+		font-weight: var(--font-medium);
+	}
+
+	.day-number {
+		margin-top: 0.5rem;
+		font-size: var(--h3-font-size);
+	}
+
+	.show-all {
+		width: 9rem;
+		margin: 0 auto;
+		margin-top: 4rem;
+		cursor: pointer;
+	}
+
+	.safaris-grid {
+		display: grid;
+		margin-block: 2rem 1rem;
+		row-gap: 2.5rem;
+	}
+
+	.safari-card-title {
+		font-size: var(--h1-font-size);
+		margin-bottom: 0.8rem;
+		text-transform: uppercase;
+	}
+
+	.last-two-words::before {
+		content: "\A";
+		white-space: pre;
+	}
+
+	.safari-card-description {
+		text-align: start;
+		padding-inline: 0.5rem;
+		opacity: 0.6;
+	}
+
+	.safari-learn-more {
+		width: 40%;
+		margin: 0 auto;
+		margin-block: 0.5rem 0.8rem;
+		cursor: pointer;
+	}
+
+	.section-questions {
+		margin-block: 4rem 1rem;
+		padding-inline: 1.5rem;
+		display: grid;
+	}
+
+	.question {
+		padding: 1rem;
+		display: grid;
+		row-gap: 1rem;
+		box-shadow: 2px 8px 30px hsla(22, 100%, 8%, 0.1);
+	}
+
+	.safari-option {
+		text-align: center;
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		box-shadow: 0 8px 24px hsla(22, 100%, 8%, 0.2);
+	}
+
+	.service-nairobi-bg p,
+	.service-header-bg p {
+		font-size: 1.8rem;
+	}
+
+	.safari-num-intro {
+		margin-block: 2rem 1rem;
+		padding-inline: 1.5rem;
+	}
+
+	.safari-day-breakdown {
+		margin-block: 7rem 2rem;
+		padding-inline: 1.5rem;
+	}
+
+	.safari-num-break-down p {
+		font-size: var(--h2-font-size);
+		margin-bottom: 0.5rem;
+	}
+
+	.list__group li {
+		font-weight: var(--font-semi-bold);
+	}
+
+	.safari-num-addition div {
+		text-align: center;
+	}
+
+	.safari-num-addition p span {
+		font-size: var(--h2-font-size);
+		font-weight: var(--font-semi-bold);
+		margin-bottom: 0.5rem;
+		color: var(--title-color);
+		text-decoration: underline;
+	}
+
+	.safari-num-addition p {
+		margin-bottom: 0.5rem;
+		margin-bottom: 2rem;
+	}
+
+	.safari-day-card {
+		display: grid;
+	}
+
+	.safari-num-btn {
+		margin: 0 auto;
+		margin-top: 0.5rem;
+		width: 50%;
+		justify-self: center;
+		cursor: pointer;
+		text-align: center;
+	}
+
+	.safari-day {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		column-gap: 2rem;
+	}
+
+	.safari-day-title {
+		position: absolute;
+		top: -3.2rem;
+		left: 1rem;
+		right: 1rem;
+		font-family: var(--secondary-style);
+		color: var(--title-color);
+		text-align: center;
+		font-size: var(--large-font-size);
+		font-weight: var(--font-bold);
+	}
+
+	.safari-day-breakdown {
+		display: grid;
+		row-gap: 6rem;
+	}
+
+	.car-details {
+		display: grid;
+		row-gap: 4rem;
+	}
+
+	.car-detail-visual-cont {
+		font-size: var(--larger-font-size);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 2rem;
+		border: 1px solid black;
+		margin: 0 auto;
+		border-radius: 50%;
+		background-color: var(--subtitle-color);
+	}
+
+	.car-detail-visual p {
+		font-size: var(--h2-font-size);
+		font-weight: var(--font-semi-bold);
+		opacity: 0.5;
+	}
+
+	.car-detail-visual {
+		display: flex;
+		flex-direction: column;
+		row-gap: 1rem;
+		text-align: center;
+	}
+
+	.car-details-pas {
+		row-gap: 2rem;
+	}
+
+	.breakdown-list hr {
+		margin-block: 1rem;
+	}
+
+	.car-hire-rates {
+		margin-block: 5rem 2rem;
+		background-color: var(--title-color);
+		padding: 2rem 1.5rem;
+	}
+
+	.car-hire-intro {
+		display: grid;
+		margin-block: 3rem 2rem;
+		opacity: 1;
+		/* animation: slide-in 2s 0.5s cubic-bezier(0, 0.5, 0, 1) forwards; */
+		padding-inline: 1.5rem;
+	}
+
+	.tables-car-container {
+		row-gap: 2rem;
+		overflow: hidden;
+	}
+
+	.car-rate-cont {
+		overflow-x: auto;
+	}
+
+	.car-rate-cont p {
+		text-transform: uppercase;
+		text-align: center;
+		text-decoration: underline;
+		margin-bottom: 1rem;
+		color: var(--subtitle-color);
+		font-size: var(--h2-font-size);
+		width: 80%;
+	}
+
+	.car-rate-table thead tr th {
+		border-block: 1px solid white;
+		color: var(--body-color);
+		padding: 4px;
+		text-align: center;
+	}
+
+	.car-rate-table tbody tr td {
+		color: var(--body-color);
+		padding-right: 0.5rem;
+		border-bottom: 1px solid white;
+		text-align: center;
+		vertical-align: text-top;
+		padding-block: 0.6rem;
+	}
+
+	.taxi-intro-sec {
+		margin-block: 3rem 2rem;
+		padding-inline: 1.5rem;
+	}
+
+	.taxi-larger-progress {
+		display: none;
+		justify-content: space-between;
+	}
+
+	.taxi-book-progres {
+		position: relative;
+		margin-bottom: 3rem;
+		box-shadow: 4px 4px 10px hsla(22, 100%, 8%, 0.1);
+	}
+
+	.choose-vehicle-flex {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.summary-taxi-details {
+		padding: 2rem 1rem;
+		background-color: #e0cccc;
+	}
+
+	.summary-taxi-details-end {
+		padding: 2rem 1rem;
+		background-color: #e0cccc;
+	}
+
+	.progress-relative-cont {
+		position: relative;
+	}
+
+	.taxi-sel-img img {
+		object-fit: cover;
+	}
+
+	.taxi-price {
+		margin-top: 1.5rem;
+		color: var(--first-color);
+		font-size: var(--larger-font-size);
+	}
+
+	.taxi-select-btn {
+		padding: 1rem 1.5rem;
+		letter-spacing: 6px;
+	}
+
+	.taxi-booking-btns {
+		display: flex;
+		flex-direction: column;
+		row-gap: 0.5rem;
+	}
+
+	.summary-col-2 {
+		display: flex;
+		flex-direction: column;
+		/* margin-bottom: 1rem; */
+	}
+
+	.taxi-booking-summary {
+		row-gap: 2rem;
+	}
+
+	.backgroud-progress {
+		display: none;
+		position: absolute;
+		height: 2px;
+		background-color: rgba(0, 0, 0, 0.4);
+		top: 1.7rem;
+		right: 3rem;
+		left: 3rem;
+		z-index: -2;
+	}
+
+	.safari-button-group {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.quick-view-overlay {
+		position: fixed;
+		top: -110rem;
+		left: 0;
+		right: 0;
+		height: 100vh;
+		padding-inline: 1.5rem;
+		background-color: rgba(0, 0, 0, 0.7);
+		overflow: auto;
+		z-index: 50;
+	}
+
+	.safari-button-group-modal {
+		display: flex;
+		flex-direction: column;
+		margin-top: 1.5rem;
+	}
+
+	.safari-button-group-modal div {
+		font-size: var(--h3-font-size);
+		margin-block: 0.5rem 0.8rem;
+		cursor: pointer;
+		text-align: center;
+	}
+
+	.quick-view-des .section-title {
+		font-size: var(--normal-font-size);
+		text-align: start;
+	}
+
+	.safari-day-accom {
+		background-color: var(--first-color);
+		margin-block: 3rem 0rem;
+		display: grid;
+		padding: 2rem 1.5rem 1rem 1.5rem;
+	}
+
+	.price-grab {
+		display: flex;
+		column-gap: 0.5rem;
+		width: calc(300% + 1rem);
+		transition: transform 0.3s ease-in-out;
+	}
+
+	.price-table-cont h1 {
+		font-size: var(--h3-font-size);
+	}
+
+	.accomo-sect-1 h2,
+	.price-table-cont h2 {
+		font-size: var(--h4-font-size);
+		opacity: 0.7;
+	}
+
+	.safari-price-table tbody td {
+		border: 1px solid var(--title-color);
+		padding: 0.25rem 0.5rem;
+		font-size: var(--normal-font-size);
+	}
+
+	.safari-price-table thead td {
+		border: 1px solid var(--title-color);
+		padding: 0.8rem 0.5rem;
+		text-align: center;
+	}
+
+	.accomodation-options {
+		display: flex;
+		justify-content: start;
+		column-gap: 0.5rem;
+	}
+
+	.accomodation-option {
+		background-color: rgb(145, 50, 12);
+		transform: skew(-20deg);
+		padding: 0.25rem 0.8rem;
+		color: var(--body-color);
+		font-weight: var(--font-semi-bold);
+		font-size: var(--normal-font-size);
+		cursor: pointer;
+	}
+
+	.safari-not-included {
+		padding-inline: 1.5rem;
+		background-color: rgb(241, 230, 230);
+		padding-bottom: 0.5rem;
+	}
+
+	.safari-accomodation-sec {
+		font-weight: var(--font-semi-bold);
+		margin-top: 3rem;
+		background-image: linear-gradient(to bottom, white 10%, transparent),
+			url(../images/keyur-nandaniya-vu0gvM5he8o-unsplash.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		padding-inline: 1.5rem;
+		padding-bottom: 3rem;
+	}
+
+	.tour-breakdown li {
+		display: flex;
+		column-gap: 0.5rem;
+		align-items: center;
+		margin-bottom: 0.3rem;
+	}
+
+	.car-carousel-item {
+		object-fit: cover;
+		width: 10rem;
+	}
+
+	.footer-content {
+		display: grid;
+		grid-template-columns: 1fr;
+		margin-bottom: 2rem;
+		row-gap: 2rem;
+	}
+	
 }
 
 .service-content.show {
@@ -142,7 +598,7 @@
 
 /* ==================== CALL US SECTION ===================== */
 .call__us_section {
-	margin-top: 28rem;
+	margin-top: 38rem;
 	padding-block: 5rem 1.5rem;
 }
 
@@ -156,13 +612,13 @@
 	color: var(--first-color);
 	font-size: var(--larger-font-size);
 	font-weight: var(--font-bold);
-	margin-bottom: 1rem;
+	margin-bottom: .25rem;
 }
 
 .call_us-des {
 	font-size: var(--small-font-size);
 	width: 80%;
-	margin-bottom: 1rem;
+	margin-bottom: .5rem;
 }
 
 .call_us-des span {

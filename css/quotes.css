@@ -75,7 +75,7 @@
 }
 
 .review.left-review {
-	transform: translate(calc(-200%), -50%) scale(0.6);
+	transform: translate(calc(-100%), -50%) scale(0.6);
 }
 
 .reviews-carousel-pips {
