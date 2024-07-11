@@ -21,14 +21,24 @@
 			<header class="header is-visible">
 				<div class="header-container">
 					<nav class="nav__bar">
-						<a class="nav__logo" href="#home">Andy Safaris</a>
+						<a class="nav__logo" href="./index.html">Andy Safaris</a>
 						<div class="nav__menu" id="js-nav-menu">
 							<ul class="nav__list">
-								<li><a href="#" class="nav__item">HOME</a></li>
-								<li><a href="#" class="nav__item">ABOUT US</a></li>
-								<li><a href="#" class="nav__item">SERVICES</a></li>
-								<li><a href="#" class="nav__item">GALLERY</a></li>
-								<li><a href="#" class="nav__item">CONTACT US</a></li>
+								<li><a href="./under-constraction.html" class="nav__item">ABOUT US</a></li>
+								<li class="service-cont">
+									<p href="" class="nav__item"
+										>SERVICES <i class="ri-arrow-down-s-line"></i
+									></p>
+									<!-- <i class="ri-arrow-drop-down-line"></i> -->
+									<ul class="service-nav-breakdown">
+										<li><a href="./safaris.html">SAFARIS</a></li>
+										<li><a href="./nairobi.html">NAIROBI-TOUR</a></li>
+										<li><a href="./taxi.html">GET A TAXI</a></li>
+										<li><a href="./car.html">CHAUFFERED CAR HIRE</a></li>
+									</ul>
+								</li>
+								<li><a href="./under-constraction.html" class="nav__item">GALLERY</a></li>
+								<li><a href="./contact-us.html" class="nav__item">CONTACT US</a></li>
 							</ul>
 							<div class="nav__close" id="js-close-btn">
 								<i class="ri-close-line"></i>
@@ -54,14 +64,18 @@
 								<div class="title">Unveils nature's breathtaking beauty</div>
 								<div class="topic">Safari</div>
 								<div class="des">
-									Embark on a thrilling safari in Kenya and witness the 
-									majestic Big Five in their natural habitat. Explore the 
-									stunning Maasai Mara and immerse yourself in 
-									vibrant local cultures.
+									Embark on a thrilling safari in Kenya and witness the majestic
+									Big Five in their natural habitat. Explore the stunning Maasai
+									Mara and immerse yourself in vibrant local cultures.
 								</div>
 								<div class="buttons">
-									<button href="./safaris.html">SEE MORE</button>
-									<button href="./safaris.html">BOOK NOW</button>
+									<button onclick="window.location.href='./safaris.html'">
+										SEE MORE
+									</button>
+									<!-- <button onclick="window.location.href='/safaris'">
+										SEE MORE
+									</button>
+									<button href="./safaris.html">BOOK NOW</button> -->
 								</div>
 							</div>
 						</div>
@@ -72,13 +86,17 @@
 								<div class="title">Do you need to a taxi??</div>
 								<div class="topic">TAXI</div>
 								<div class="des">
-									Enjoy seamless airport and hotel transfers with our 
-									reliable and professional drivers. Book easily and 
-									travel stress-free to your destination.
+									Enjoy seamless airport and hotel transfers with our reliable
+									and professional drivers. Book easily and travel stress-free
+									to your destination.
 								</div>
 								<div class="buttons">
-									<button href="./taxi.html">SEE MORE</button>
-									<button href="./taxi.html">BOOK NOW</button>
+									<button onclick="window.location.href='./taxi.html'">
+										SEE MORE
+									</button>
+									<!-- <button onclick="window.location.href='/get-taxi'">
+										BOOK NOW
+									</button> -->
 								</div>
 							</div>
 						</div>
@@ -89,14 +107,19 @@
 								<div class="title">Explore The Green City In The Sun</div>
 								<div class="topic">TOUR</div>
 								<div class="des">
-									Discover Nairobi's top attractions, including the 
-									Giraffe Centre and the David Sheldrick Wildlife Trust. 
-									Experience the vibrant culture and unique wildlife of 
-									Kenya's capital.
+									Discover Nairobi's top attractions, including the Giraffe
+									Centre and the David Sheldrick Wildlife Trust. Experience the
+									vibrant culture and unique wildlife of Kenya's capital.
 								</div>
 								<div class="buttons">
-									<button href="#">SEE MORE</button>
-									<button href="#">BOOK NOW</button>
+									<button onclick="window.location.href='./nairobi.html'">
+										SEE MORE
+									</button>
+									<!-- <button
+										onclick="window.location.href='/nairobi-tour/contact-form'"
+									>
+										BOOK NOW
+									</button> -->
 								</div>
 							</div>
 						</div>
@@ -104,16 +127,18 @@
 							<img src="./images/carYard1.jpeg" alt="" />
 							<div class="content">
 								<div class="author">Car Hire</div>
-								<div class="title">Get safe and best deals in chauffered car hiring</div>
-								<div class="topic">Chauffered Car Hire</div>
+								<div class="title">Get safe and best deals in car hiring</div>
+								<div class="topic">Car Hire</div>
 								<div class="des">
-									Hire a well-maintained car from our extensive fleet 
-									for business or leisure. Enjoy competitive rates, 
-									flexible options, and excellent customer service.
+									Hire a well-maintained car from our extensive fleet for
+									business or leisure. Enjoy competitive rates, flexible
+									options, and excellent customer service.
 								</div>
 								<div class="buttons">
-									<button href="./car.html">SEE MORE</button>
-									<button href="./car.html">BOOK NOW</button>
+									<button onclick="window.location.href='./car.html'">
+										SEE MORE
+									</button>
+									<!-- <button href="./car.html">BOOK NOW</button> -->
 								</div>
 							</div>
 						</div>
@@ -145,8 +170,8 @@
 						</div>
 					</div>
 					<div class="arrows">
-						<button id="prev"><</button>
-						<button id="next">></button>
+						<button id="prev"><i class="ri-arrow-left-s-line"></i></button>
+						<button id="next"><i class="ri-arrow-right-s-line"></i></button>
 					</div>
 					<div class="time"></div>
 				</div>
@@ -246,26 +271,43 @@
 				<form action="#" class="contact-form">
 					<div class="input-container">
 						<i class="ri-map-pin-line input-icon"></i>
-						<input type="text" class="input-field" placeholder="From Address" />
-					</div>
-					<div class="input-container">
-						<i class="ri-map-pin-line input-icon"></i>
-						<input type="text" class="input-field" placeholder="To..." />
-					</div>
-					<div class="input-container">
-						<i class="ri-phone-fill input-icon"></i>
-						<input type="text" class="input-field" placeholder="Phone Number" />
-					</div>
-					<div class="input-container">
-						<i class="ri-calendar-2-line input-icon"></i>
 						<input
 							type="text"
 							class="input-field"
+							name="address"
+							id="pickup-address"
+							placeholder="From Address"
+						/>
+					</div>
+					<div class="input-container">
+						<i class="ri-map-pin-line input-icon"></i>
+						<input
+							type="text"
+							class="input-field"
+							name="address"
+							id="dropoff-address"
+							placeholder="To..."
+						/>
+					</div>
+					<div class="input-container">
+						<i class="ri-phone-fill input-icon"></i>
+						<input
+							type="text"
+							class="input-field"
+							placeholder="Phone Number"
+							required
+						/>
+					</div>
+					<div class="input-container">
+						<input
+							type="date"
+							class="input-field"
 							placeholder="Date and Time"
+							required
 						/>
 					</div>
 				</form>
-				<a class="get-taxi-button btn" href="">GET TAXI</a>
+				<a class="get-taxi-button btn" href="./taxi.html">GET TAXI</a>
 			</section>
 			<section class="section__our_services">
 				<div class="service__container">
@@ -283,79 +325,27 @@
 							<div class="service-button" data-js-data="safari">SAFARIS</div>
 							<div class="service-button" data-js-data="hire">CAR HIRE</div>
 						</div>
-						<div class="service-content show js-taxi">
-							<img src="./images/taxi2.jpg" alt="" />
-							<div class="service-des">
-								<p class="service-subtitle section-subtitle">
-									SERVICE IS ALWAYS THE BEST
-								</p>
-								<p class="service-title section-title">TAKE YOU ANYWHERE</p>
-								<p class="service-description">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit.
-									Quidem, facilis eaque repudiandae sequi voluptates sit
-									asperiores repellat eius nam harum sed obcaecati maiores
-									molestiae atque debitis perspiciatis, excepturi provident
-									officia.
-								</p>
-								<a href="" class="btn book__now-button">BOOK NOW</a>
+						<div id="service-content-container">
+							<div class="service-content show js-taxi">
+								<img src="./images/taxi2.jpg" alt="" />
+								<div class="service-des">
+									<p class="service-subtitle section-subtitle">
+										SERVICE IS ALWAYS THE BEST
+									</p>
+									<p class="service-title section-title">TAKE YOU ANYWHERE</p>
+									<p class="service-description">
+										Start and end your journey stress-free with our reliable
+										airport and hotel transfer services. Whether you're
+										traveling for business or leisure, our professional drivers
+										ensure timely pickups and comfortable rides to your
+										destination. Enjoy the convenience of our easy booking
+										process and exceptional service. Book your transfer today
+										and travel with confidence!
+									</p>
+									<a href="./taxi.html" class="btn book__now-button">BOOK NOW</a>
+								</div>
 							</div>
 						</div>
-						<div class="service-content js-nairobi">
-							<img src="./images/nairobi2.jpg" alt="" />
-							<div class="service-des">
-								<p class="service-subtitle section-subtitle">
-									SERVICE IS ALWAYS THE BEST
-								</p>
-								<p class="service-title section-title">
-									TOUR THE HEART OF AFRICA
-								</p>
-								<p class="service-description">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit.
-									Quidem, facilis eaque repudiandae sequi voluptates sit
-									asperiores repellat eius nam harum sed obcaecati maiores
-									molestiae atque debitis perspiciatis, excepturi provident
-									officia.
-								</p>
-								<a href="" class="btn book__now-button">BOOK NOW</a>
-							</div>
-						</div>
-						<div class="service-content js-safari">
-							<img src="./images/twoElephants.jpg" alt="" />
-							<div class="service-des">
-								<p class="service-subtitle section-subtitle">
-									SERVICE IS ALWAYS THE BEST
-								</p>
-								<p class="service-title section-title">
-									NATURE'S HIDDEN WONDERs
-								</p>
-								<p class="service-description">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit.
-									Quidem, facilis eaque repudiandae sequi voluptates sit
-									asperiores repellat eius nam harum sed obcaecati maiores
-									molestiae atque debitis perspiciatis, excepturi provident
-									officia.
-								</p>
-								<a href="" class="btn book__now-button">BOOK NOW</a>
-							</div>
-						</div>
-						<div class="service-content js-hire">
-							<img src="./images/carYard2.webp" alt="" />
-							<div class="service-des">
-								<p class="service-subtitle section-subtitle">
-									SERVICE IS ALWAYS THE BEST
-								</p>
-								<p class="service-title section-title">GET CARS FROM US</p>
-								<p class="service-description">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit.
-									Quidem, facilis eaque repudiandae sequi voluptates sit
-									asperiores repellat eius nam harum sed obcaecati maiores
-									molestiae atque debitis perspiciatis, excepturi provident
-									officia.
-								</p>
-								<a href="" class="btn book__now-button">BOOK NOW</a>
-							</div>
-						</div>
-					</div>
 				</div>
 			</section>
 			<section class="call__us_section">
@@ -363,11 +353,13 @@
 					<p class="call_us-title">CALL US TO BOOK A TAXI</p>
 					<p class="call_us-number">(+254) 719 700 261</p>
 					<p class="call_us-des">
-						Lorem ipsum dolor, <span>sit amet consectetur</span> adipisicing
-						elit. Maiores Lorem ipsum dolor, sit amet consectetur adipisicing
-						elit. Maiores
+						Don't let travel stress ruin your trip! Call us now or book online
+						for reliable and comfortable
+						<span>airport and hotel transfers</span>. Enjoy peace of mind with
+						our professional drivers and seamless service. Your journey begins
+						with us!
 					</p>
-					<a href="" class="btn book__now-button">BOOK NOW</a>
+					<a href="./taxi.html" class="btn book__now-button">BOOK NOW</a>
 				</div>
 			</section>
 			<section class="why__us_section">
@@ -384,40 +376,46 @@
 							<i class="ri-thumb-up-line core-value-icon"></i>
 							<p class="value-heading">100% PLEASURE</p>
 							<p class="value-des">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-								Repellat qui facere, odit ea voluptas officiis, ullam possimus
-								maiores beatae maxime provident necessitatibus explicabo,
-								laboriosam vitae ad aliquid earum fugiat ipsa.
+								At Andy Safaris, we prioritize your satisfaction above all else.
+								Our dedicated team goes the extra mile to ensure every aspect of
+								your experience is enjoyable and stress-free. From seamless
+								booking to friendly service, we are committed to making your
+								journey with us a delightful one. Your pleasure is our passion.
 							</p>
 						</div>
 						<div class="value-container">
 							<i class="ri-planet-line core-value-icon"></i>
 							<p class="value-heading">NATIONWIDE</p>
 							<p class="value-des">
-								Lorem ipsum r sit amet consectetur adipisicing elit. Repellat
-								qui facere, odit ea voluptas officiis, ullam possimus maiores
-								beatae maxime provident necessitatibus explicabo, laboriosam
-								vitae ad aliquid earum fugiat ipsa.
+								Our services span the entire country, offering you the
+								flexibility to travel wherever you need. Whether you're
+								exploring urban centers or venturing into remote destinations,
+								we provide reliable and consistent service across Kenya. Enjoy
+								the freedom to discover the diverse beauty of our nation with
+								confidence, knowing we are with you every step of the way.
 							</p>
 						</div>
 						<div class="value-container">
 							<i class="ri-price-tag-3-line core-value-icon"></i>
 							<p class="value-heading">FIXED PRICES</p>
 							<p class="value-des">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-								Repellat qui facere, odit ea voluptas officiis, ullam possimus
-								maiores beatae maxime provident necessitatibus explicabo,
-								laboriosam vitae ad aliquid earum fugiat ipsa.
+								We believe in transparency and fairness, which is why we offer
+								fixed pricing on all our services. No hidden fees, no
+								surprises—just honest and straightforward rates. You can plan
+								your travel budget with confidence, knowing that the price you
+								see is the price you pay.
 							</p>
 						</div>
 						<div class="value-container">
 							<i class="ri-shield-check-line core-value-icon"></i>
 							<p class="value-heading">SAFETY</p>
 							<p class="value-des">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-								Repellat qui facere, odit ea voluptas officiis, ullam possimus
-								maiores beatae maxime provident necessitatibus explicabo,
-								laboriosam vitae ad aliquid earum fugiat ipsa.
+								Your safety is our top priority. We adhere to the highest
+								standards of safety in all our operations, from vehicle
+								maintenance to driver training. Our vehicles are regularly
+								inspected and sanitized, and our drivers are trained to provide
+								a secure and comfortable ride. Travel with peace of mind,
+								knowing that your well-being is in good hands with us.
 							</p>
 						</div>
 					</div>
@@ -441,10 +439,9 @@
 								style="background-image: url(./images/review1.jpg)"
 							></div>
 							<div class="review-text">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
-								aut a enim tempore sequi cumque id ullam facere sit, quasi
-								repellat reiciendis dolorum ratione fugit aliquid placeat
-								sapiente quibusdam dicta?
+								Booked an airport transfer and was pleasantly surprised by the
+								professionalism and efficiency. Will definitely use their
+								services again
 							</div>
 						</li>
 						<li class="review current-review">
@@ -453,10 +450,8 @@
 								style="background-image: url(./images/review1.jpg)"
 							></div>
 							<div class="review-text">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
-								aut a enim tempore sequi cumque id ullam facere sit, quasi
-								repellat reiciendis dolorum ratione fugit aliquid placeat
-								sapiente quibusdam dicta?
+								Great service from start to finish. The car hire was affordable
+								and the vehicle was perfect for our needs. Highly satisfied!
 							</div>
 						</li>
 						<li class="review next-review">
@@ -465,10 +460,9 @@
 								style="background-image: url(./images/review1.jpg)"
 							></div>
 							<div class="review-text">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
-								aut a enim tempore sequi cumque id ullam facere sit, quasi
-								repellat reiciendis dolorum ratione fugit aliquid placeat
-								sapiente quibusdam dicta?
+								We used their car hire service for our trip to Nairobi. The car
+								was in excellent condition, and the booking process was smooth
+								and easy
 							</div>
 						</li>
 						<li class="review">
@@ -477,10 +471,9 @@
 								style="background-image: url(./images/review1.jpg)"
 							></div>
 							<div class="review-text">
-								lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
-								aut a enim tempore sequi cumque id ullam facere sit, quasi
-								repellat reiciendis dolorum ratione fugit aliquid placeat
-								sapiente quibusdam dicta?
+								Fantastic Nairobi city tour! We visited the Giraffe Centre and
+								the David Sheldrick Wildlife Trust. The guide was excellent and
+								made the tour very enjoyable
 							</div>
 						</li>
 						<li class="review">
@@ -489,10 +482,31 @@
 								style="background-image: url(./images/review1.jpg)"
 							></div>
 							<div class="review-text">
-								lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
-								aut a enim tempore sequi cumque id ullam facere sit, quasi
-								repellat reiciendis dolorum ratione fugit aliquid placeat
-								sapiente quibusdam dicta?
+								The team was very helpful in arranging our safari. Everything
+								was well organized, and we had an amazing time exploring the
+								Maasai Mara.
+							</div>
+						</li>
+						<li class="review">
+							<div
+								class="review-image"
+								style="background-image: url(./images/review1.jpg)"
+							></div>
+							<div class="review-text">
+								Their airport transfer service was top-notch. The driver was
+								waiting for us on arrival and helped with our luggage. Very
+								reliable!
+							</div>
+						</li>
+						<li class="review">
+							<div
+								class="review-image"
+								style="background-image: url(./images/review1.jpg)"
+							></div>
+							<div class="review-text">
+								Used their car hire service during our stay in Kenya. The
+								process was hassle-free, and the car was in great condition.
+								Excellent experience!"
 							</div>
 						</li>
 					</ul>
@@ -502,21 +516,23 @@
 				</div>
 			</section>
 			<footer class="footer">
-				<a href="#home" class="back-top"
-					><div>
-						<i class="ri-arrow-up-s-line"></i></div
-				></a>
+				<a href="#home" class="back-top">
+					<div>
+						<i class="ri-arrow-up-s-line"></i>
+					</div>
+				</a>
 				<div class="footer-content">
 					<div class="footer_about-us">
 						<p class="section-title footer-title">ABOUT US</p>
 						<p class="footer-about-us">
-							Welcome to Andy Safaris, your ultimate partner for unforgettable 
-							adventures and seamless travel experiences in Kenya. We specialize 
-							in thrilling safari tours, reliable airport and hotel transfers, exciting Nairobi city 
-							tours, and convenient car hire services. Our dedicated team is committed 
-							to providing exceptional service, ensuring your journey through Kenya is 
-							comfortable, memorable, and full of incredible moments. Join us and 
-							discover the beauty, culture, and wildlife of Kenya with the experts!
+							Welcome to Andy Safaris, your ultimate partner for unforgettable
+							adventures and seamless travel experiences in Kenya. We specialize
+							in thrilling safari tours, reliable airport and hotel transfers,
+							exciting Nairobi city tours, and convenient car hire services. Our
+							dedicated team is committed to providing exceptional service,
+							ensuring your journey through Kenya is comfortable, memorable, and
+							full of incredible moments. Join us and discover the beauty,
+							culture, and wildlife of Kenya with the experts!
 						</p>
 						<div class="footer-socials">
 							<i class="ri-twitter-x-fill"></i>
@@ -528,19 +544,19 @@
 					<!-- <div class="footer_explore"></div> -->
 					<div class="footer_contact-info">
 						<p class="section-title footer-title">CONTACT US</p>
-						<p class="footer-address"><span>Address: </span>Nairobi</p>
+						<p class="footer-address"><span>Address: </span>Some Address</p>
 						<div class="footer-contacts">
 							<i class="ri-phone-fill"></i>
 							+254 719 700 261
 						</div>
 						<div class="footer-contacts">
 							<i class="ri-mail-fill"></i>
-							info@andysafaris.com
+							andysafariskenya@gmail.com
 						</div>
 					</div>
 				</div>
 				<div class="footer_rights">
-					Designed and developed By<span>Laini Technologies</span> All Rights Reserved
+					Copyright @2024 By <span>LainiTech</span> All Rights Reserved
 				</div>
 			</footer>
 		</div>
@@ -555,6 +571,7 @@
 			}
 		</script>
 		<script src="./js/nav.js"></script>
-		<script src="./js/index.js"></script>
+		<script src="./js/index.js" type="module"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8Ij4EZwonOnh4ck32fK2EMSHkYutFTL0&libraries=places"></script>
 	</body>
 </html>

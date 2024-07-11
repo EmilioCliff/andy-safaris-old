@@ -1,37 +1,103 @@
-import { vehicles } from "./data/vehicle.js";
+import { vehicles, GetVehicle } from "./data/vehicle.js";
 
-const sliderBtns = document.querySelectorAll(".car-slider #slider-button");
-const imageList = document.querySelector(".car-slider");
-const sliderScrollBar = document.querySelector(".slider-scroll-bar");
-const sliderScrollThumb = document.querySelector(".slider-scroll-bar-thumb");
-const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
-
-sliderBtns.forEach((btn) => {
-	btn.addEventListener("click", () => {
-		const direction = btn.classList.contains("slider-left") ? -1 : 1;
-		const scrollAmount = imageList.clientWidth * direction;
-		imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+function loadCarHirePage() {
+	fillCarDetails(1);
+	let carCarousel = document.querySelector(".car-carousel");
+	carCarousel.innerHTML = "";
+	carCarousel.innerHTML = `<img class="car-carousel-item selected-car-group" src=${vehicles[0].Images[0]} data-vehicle-id=${vehicles[0].ID} alt="">`;
+	vehicles.slice(1).forEach((vehicle, index) => {
+		carCarousel.innerHTML += `<img class="car-carousel-item" src=${vehicle.Images[0]} data-vehicle-id=${vehicle.ID} alt="">`;
 	});
-});
 
-const handleSlideButtons = () => {
-	sliderBtns[0].style.display = imageList.scrollLeft <= 0 ? "none" : "flex";
-	sliderBtns[1].style.display =
-		imageList.scrollLeft >= maxScrollLeft ? "none" : "flex";
-};
+	// fill tables
+	let selfDrive = document.querySelector(".table-body-self-drive");
+	let withDriver = document.querySelector(".table-body-with-driver");
+	let contract = document.querySelector(".table-body-contract");
+	vehicles.forEach((vehicle) => {
+		selfDrive.innerHTML += `
+            <tr>
+                <td>${vehicle.Name}</td>
+                <td>Per Month</td>
+                <td>${vehicle.PricePerMonth}</td>
+                <td>EXCLUSIVE</td>
+                <td>INCLUSIVE</td>
+                <td>200KM, Any Extra KM is charged .2USD/KM</td>
+            </tr>
+        `;
+		withDriver.innerHTML += `
+            <tr>
+                <td>${vehicle.Name}</td>
+                <td>Per Month</td>
+                <td>${vehicle.PricePerMothWithDriver}</td>
+                <td>EXCLUSIVE</td>
+                <td>INCLUSIVE</td>
+                <td>200KM, Any Extra KM is charged .2USD/KM</td>
+            </tr>
+        `;
+		contract.innerHTML += `
+            <tr>
+                <td>${vehicle.Name}</td>
+                <td>Per Month</td>
+                <td>${vehicle.PriceMonthsContract}</td>
+                <td>EXCLUSIVE</td>
+                <td>INCLUSIVE</td>
+                <td>5000KM</td>
+            </tr>
+        `;
+	});
 
-const updateScrollThumbPosition = () => {
-	const scrollPostition = imageList.scrollLeft;
-	const thumnPosition =
-		(scrollPostition / maxScrollLeft) *
-		(sliderScrollBar.clientWidth - sliderScrollThumb.offsetWidth);
-	sliderScrollThumb.style.left = `${thumnPosition}px`;
-};
+	const sliderBtns = document.querySelectorAll(".car-slider #slider-button");
+	const imageList = document.querySelector(".car-slider");
+	const sliderScrollBar = document.querySelector(".slider-scroll-bar");
+	const sliderScrollThumb = document.querySelector(".slider-scroll-bar-thumb");
 
-imageList.addEventListener("scroll", () => {
-	handleSlideButtons();
-	updateScrollThumbPosition();
-});
+	const updateMaxScrollLeft = () =>
+		imageList.scrollWidth - imageList.clientWidth;
+
+	const updateScrollThumbPosition = () => {
+		const maxScrollLeft = updateMaxScrollLeft();
+		if (maxScrollLeft > 0) {
+			const scrollPosition = imageList.scrollLeft;
+			const thumbPosition =
+				(scrollPosition / maxScrollLeft) *
+				(sliderScrollBar.clientWidth - sliderScrollThumb.offsetWidth);
+			sliderScrollThumb.style.left = `${thumbPosition}px`;
+		}
+	};
+
+	const handleSlideButtons = () => {
+		const maxScrollLeft = updateMaxScrollLeft();
+		sliderBtns[0].style.display = imageList.scrollLeft <= 0 ? "none" : "flex";
+		sliderBtns[1].style.display =
+			imageList.scrollLeft >= maxScrollLeft ? "none" : "flex";
+	};
+
+	sliderBtns.forEach((btn) => {
+		btn.addEventListener("click", () => {
+			const direction = btn.classList.contains("slider-left") ? -1 : 1;
+			const scrollAmount = imageList.clientWidth * direction;
+			imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+		});
+	});
+
+	imageList.addEventListener("scroll", () => {
+		handleSlideButtons();
+		updateScrollThumbPosition();
+	});
+
+	const initializeSlider = () => {
+		const maxScrollLeft = updateMaxScrollLeft();
+		sliderScrollThumb.style.display = "block";
+		handleSlideButtons();
+		updateScrollThumbPosition();
+	};
+
+	initializeSlider();
+	window.addEventListener("resize", initializeSlider);
+	sliderBtns[1].style.display = "flex";
+}
+
+loadCarHirePage();
 
 const carosuelCarBtn = document.querySelectorAll(".car-carousel-item");
 carosuelCarBtn.forEach((btn) => {
@@ -46,11 +112,13 @@ carosuelCarBtn.forEach((btn) => {
 });
 
 function fillCarDetails(vehicleID) {
-	const vehicle = getVehicleById(vehicleID);
+	const vehicle = GetVehicle(vehicleID);
 	document.querySelector(".car-name").innerText = vehicle.Name;
+
 	document.querySelector(
 		".selected-car"
 	).innerHTML = `<img class="car-image" src=${vehicle.Images[0]} data-car-selected-id=${vehicle.ID} alt="">`;
+
 	document.querySelector(".car-details-visual").innerHTML = `
                 <div class="car-detail-visual">
                     <div class="car-detail-visual-cont">
@@ -106,8 +174,11 @@ function fillCarDetails(vehicleID) {
                         <p class="extra-break_down">${vehicle.Make.Extras}</p>
                     </li>
     `;
-}
 
-function getVehicleById(vehicleId) {
-	return vehicles.find((vehicle) => vehicle.ID === vehicleId);
+	document
+		.querySelector(".car-hire-book-now")
+		.setAttribute(
+			"onclick",
+			`window.location.href='contact-us.html?form=hire&carID=${vehicle.ID}'`
+		);
 }

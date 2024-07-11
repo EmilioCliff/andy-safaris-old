@@ -77,30 +77,12 @@ export async function initIndexMap() {
 		document.getElementById("dropoff-address"),
 		{ bounds: getKenyaBounds(), componentRestrictions: { country: "KE" } }
 	);
-
-	// if (savedState.pickupLocation) {
-	// 	document.getElementById("pickup-location").innerText =
-	// 		savedState.pickupLocation;
-	// }
-	// if (savedState.dropoffLocation) {
-	// 	document.getElementById("dropoff-location").innerText =
-	// 		savedState.dropoffLocation;
-	// }
-
-	// destinationAutocomplete.addListener("place_changed", calculateRoute);
-
-	// if (savedState.directions) {
-	// 	directionsRenderer.setDirections(savedState.directions);
-	// 	document.getElementById("total-distance").textContent =
-	// 		savedState.totalDistance;
-	// 	document.getElementById("total-time").textContent = savedState.totalTime;
-	// }
 }
 
 initIndexMap();
 
 // ============================= SERVICE ==========================
-let serviceContainer = document.getElementById("service-content-container")
+let serviceContainer = document.getElementById("service-content-container");
 let servicesBtn = document.querySelectorAll(".service-button");
 servicesBtn.forEach((service) => {
 	service.addEventListener("click", () => {
@@ -125,10 +107,7 @@ servicesBtn.forEach((service) => {
 					<a href="${services[val].url}" class="btn book__now-button">BOOK NOW</a>
 				</div>
 			</div>
-		`
-		// document.querySelector(".show").classList.remove("show");
-		// const val = service.dataset.jsData;
-		// document.querySelector(`.js-${val}`).classList.add("show");
+		`;
 	});
 });
 
@@ -139,14 +118,6 @@ let currentIndex = 1;
 let nextIndex = 2;
 let lastIndex = reviews.length - 1;
 
-// document
-// 	.querySelector(".previous-review")
-// 	.addEventListener("click", (event) => {
-// 		showReview(event);
-// 	});
-// document.querySelector(".next-review").addEventListener("click", (event) => {
-// 	showReview(event);
-// });
 reviews.forEach((review) => {
 	review.addEventListener("click", (event) => {
 		showReview(event);

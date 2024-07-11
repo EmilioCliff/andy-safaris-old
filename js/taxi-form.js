@@ -140,22 +140,6 @@ function validateContactDetailsForm(values) {
 		errors[3] = "phone-number is required";
 	}
 
-	// if (!values.pickupDay || !/^\d{4}-\d{2}-\d{2}$/.test(values.pickupDay)) {
-	// 	errors[0] = "Valid pickupDay is required (YYYY-MM-DD)";
-	// }
-
-	// if (!values.pickupTime || !/^\d{2}:\d{2}$/.test(values.pickupTime)) {
-	// 	errors[1] = "Valid pickupTime time is required (HH:MM)";
-	// }
-
-	// if (!values.pickupLocation || values.pickupLocation.trim() === "") {
-	// 	errors[2] = "pickupLocation is required";
-	// }
-
-	// if (!values.dropoffLocation || values.dropoffLocation.trim() === "") {
-	// 	errors[3] = "Last dropoffLocation is required";
-	// }
-
 	return errors;
 }
 
@@ -301,39 +285,3 @@ export function displayReviewFormErrors(errors) {
 		});
 	}, 3000);
 }
-
-// function validateFormValues(values) {
-// 	// const errors = {};
-
-// 	// Validate text fields
-// 	if (!values.firstName || values.firstName.trim() === "") {
-// 		errors.firstName = "First name is required";
-// 	}
-
-// 	if (!values.lastName || values.lastName.trim() === "") {
-// 		errors.lastName = "Last name is required";
-// 	}
-
-// 	// Validate email
-
-// 	// Validate passwords
-// 	if (!values.password || values.password.trim() === "") {
-// 		errors.password = "Password is required";
-// 	}
-
-// 	if (values.password !== values.confirmPassword) {
-// 		errors.confirmPassword = "Passwords do not match";
-// 	}
-
-// 	// Placeholder for payment method validation
-// 	// const paymentMethod = collectPaymentMethod();
-// 	// if (!paymentMethod) {
-// 	// 	errors.paymentMethod = "Payment method is required";
-// 	// }
-
-// 	// values.paymentMethod = paymentMethod;
-
-// 	return errors;
-// }
-
-// function collectPaymentMethod() {}
