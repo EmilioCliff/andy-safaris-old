@@ -644,7 +644,7 @@ function showContactDetails() {
 								</svg>
 							</div>
 							<div class="payment-method" data-payment-value="1">
-								<img src="/static/icons/cashPaymnet.png" alt="" />
+								<img src="./icons/cashPaymnet.png" alt="" />
 								<p>CASH</p>
 								<svg
 									class="check-payment-tick"
@@ -658,7 +658,7 @@ function showContactDetails() {
 								</svg>
 							</div>
 							<div class="payment-method" data-payment-value="2">
-								<img src="/static/icons/mpesa-logo.svg.png" alt="" />
+								<img src="./icons/mpesa-logo.svg.png" alt="" />
 								<p>MPESA</p>
 								<svg
 									class="check-payment-tick"
