@@ -114,15 +114,21 @@ function sendContactForm(entries, formName) {
 		}
 	}
 
-	const body = {
+	// const body = {
+	// 	method: "POST",
+	// 	headers: {
+	// 		"Content-Type": "application/json; charset=utf-8",
+	// 	},
+	// 	body: JSON.stringify(entries),
+	// };
+
+	fetch("../php/email.php", {
 		method: "POST",
 		headers: {
-			"Content-Type": "application/json; charset=utf-8",
+			"Content-Type": "application/json",
 		},
 		body: JSON.stringify(entries),
-	};
-
-	fetch("../php/email.php", body)
+	})
 		.then((response) => response.text())
 		.then((data) => {
 			console.log(data);
