@@ -902,43 +902,60 @@ function showBookSummary() {
 
 	document.querySelector(".taxi-next-btn").addEventListener("click", () => {
 		let statusInfo = document.querySelector(".error-info");
-		const body = {
+		// const body = {
+		// 	method: "POST",
+		// 	headers: {
+		// 		"Content-Type": "application/json",
+		// 	},
+		// 	body: JSON.stringify(savedData),
+		// };
+		fetch(`../php/email.php?form=${formName}`, {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
 			},
-			body: JSON.stringify(savedData),
-		};
-		fetch("/contact-form/taxi", body)
-			// .then((response) => response.json())
-			.then((response) => {
-				if (!response.ok) {
-					response.json().then((errorData) => {
-						statusInfo.classList.add("fail");
-						statusInfo.innerHTML = `Failed Submitting Form: ${errorData}`;
-						setTimeout(() => {
-							statusInfo.innerHTML = "";
-							statusInfo.classList.remove("success");
-							statusInfo.classList.remove("fail");
-						}, 1000);
-						return;
-					});
-				}
-				return response.json();
-			})
+			body: JSON.stringify(entries),
+		})
+			.then((response) => response.text())
 			.then((data) => {
-				localStorage.clear();
-				window.location.href = "/";
+				console.log(data);
+				document.querySelector(`#${formName}-form`).reset();
+				alert("Form Submitted Successfully");
 			})
 			.catch((error) => {
-				statusInfo.classList.add("fail");
-				statusInfo.innerHTML = `Failed Submitting Form: ${error}`;
-				setTimeout(() => {
-					statusInfo.innerHTML = "";
-					statusInfo.classList.remove("success");
-					statusInfo.classList.remove("fail");
-				}, 1000);
+				console.log(error);
+				alert("Form submission error: " + error);
 			});
+		// fetch("/contact-form/taxi", body)
+		// 	// .then((response) => response.json())
+		// 	.then((response) => {
+		// 		if (!response.ok) {
+		// 			response.json().then((errorData) => {
+		// 				statusInfo.classList.add("fail");
+		// 				statusInfo.innerHTML = `Failed Submitting Form: ${errorData}`;
+		// 				setTimeout(() => {
+		// 					statusInfo.innerHTML = "";
+		// 					statusInfo.classList.remove("success");
+		// 					statusInfo.classList.remove("fail");
+		// 				}, 1000);
+		// 				return;
+		// 			});
+		// 		}
+		// 		return response.json();
+		// 	})
+		// 	.then((data) => {
+		// 		localStorage.clear();
+		// 		window.location.href = "/";
+		// 	})
+		// 	.catch((error) => {
+		// 		statusInfo.classList.add("fail");
+		// 		statusInfo.innerHTML = `Failed Submitting Form: ${error}`;
+		// 		setTimeout(() => {
+		// 			statusInfo.innerHTML = "";
+		// 			statusInfo.classList.remove("success");
+		// 			statusInfo.classList.remove("fail");
+		// 		}, 1000);
+		// 	});
 	});
 
 	document.getElementById("contact-edit-back").addEventListener("click", () => {

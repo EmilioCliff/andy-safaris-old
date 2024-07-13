@@ -115,7 +115,7 @@ function sendContactForm(entries, formName) {
 		}
 	}
 
-	fetch("../php/email.php", {
+	fetch(`../php/email.php?form=${formName}`, {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
