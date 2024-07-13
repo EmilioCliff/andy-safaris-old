@@ -89,6 +89,7 @@
                 <p>Dear ' . htmlspecialchars($data["firstName"]) . ' ' . htmlspecialchars($data["lastName"]) . ',</p>
                 <p>Thank you for booking your dream car with us. Here are the details of your booking:</p>
                 <ul>
+                <li><strong>Car Name:</strong> ' . htmlspecialchars($data["carName"]) . '</li>
                     <li><strong>Email:</strong> ' . htmlspecialchars($data["email"]) . '</li>
                     <li><strong>Phone Number:</strong> ' . htmlspecialchars($data["phoneNumber"]) . '</li>
                     <li><strong>Duration:</strong> ' . htmlspecialchars($data["duration"]) . '</li>

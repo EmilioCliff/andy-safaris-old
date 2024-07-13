@@ -58,6 +58,7 @@ function initContact(form) {
 
 				// send post request to my backend
 				if (errors.length === 0) {
+					entries.carName = vehicle.Name;
 					sendContactForm(entries, "car-hire");
 					return;
 				}

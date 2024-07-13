@@ -901,7 +901,7 @@ function showBookSummary() {
 	`;
 
 	document.querySelector(".taxi-next-btn").addEventListener("click", () => {
-		let statusInfo = document.querySelector(".error-info");
+		// let statusInfo = document.querySelector(".error-info");
 		// const body = {
 		// 	method: "POST",
 		// 	headers: {
@@ -909,12 +909,12 @@ function showBookSummary() {
 		// 	},
 		// 	body: JSON.stringify(savedData),
 		// };
-		fetch(`../php/email.php?form=${formName}`, {
+		fetch(`../php/email.php?form=taxi`, {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
 			},
-			body: JSON.stringify(entries),
+			body: JSON.stringify(savedData),
 		})
 			.then((response) => response.text())
 			.then((data) => {
