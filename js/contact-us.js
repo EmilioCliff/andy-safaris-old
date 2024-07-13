@@ -121,7 +121,6 @@ function sendContactForm(entries, formName) {
 		},
 		body: JSON.stringify(entries),
 	};
-<<<<<<< HEAD
 
 	fetch("../php/email.php", body)
 		.then((response) => response.text())
@@ -129,27 +128,6 @@ function sendContactForm(entries, formName) {
 			console.log(data);
 			// document.querySelector(`#${formName}-form`).reset();
 			// alert("Form Submitted Successfully");
-=======
-	fetch(`/contact-form/${formName}`, body)
-		.then((response) => {
-			if (!response.ok) {
-				response.json().then((errorData) => {
-					setInfoMessage([false, `Failed Submitting form: ${errorData}`]);
-					return;
-				});
-			}
-			return response.json();
-		})
-		.then((data) => {
-			if (formName === "review") {
-				setInfoMessage([true, `Submitted successful`], true);
-			} else {
-				setInfoMessage([true, `Submitted successful`]);
-			}
-
-			document.querySelector(`#${formName}-form`).reset();
-			// window.location.href = `/${formName}`;
->>>>>>> 1a02fd406349037742a0f38dd8c430b2c9e90208
 		})
 		.catch((error) => {
 			console.log(error);

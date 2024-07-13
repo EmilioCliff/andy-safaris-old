@@ -10,7 +10,13 @@ export const vehicles = [
 		PricePerMothWithDriver: "$2,500",
 		PriceMonthsContract: "$3,400",
 		ComesWith: [],
-		Images: ["./images/cars/mercedes-benz-e220.jpg"],
+		Images: [
+			"./images/cars/mercedes-benz-e220.jpg",
+			"./images/cars/mercedes-benz-e220.jpg",
+			"./images/cars/mercedes-benz-e220.jpg",
+			"./images/cars/mercedes-benz-e220.jpg",
+			"./images/cars/mercedes-benz-e220.jpg",
+		],
 		Make: {
 			Engine: "3000",
 			InteriorColor: "Black",
@@ -33,7 +39,13 @@ export const vehicles = [
 		PricePerMothWithDriver: "$2,200",
 		PriceMonthsContract: "$4,200",
 		ComesWith: [],
-		Images: ["./images/cars/toyota-hiace.jpg"],
+		Images: [
+			"./images/cars/toyota-hiace.jpg",
+			"./images/cars/toyota-hiace.jpg",
+			"./images/cars/toyota-hiace.jpg",
+			"./images/cars/toyota-hiace.jpg",
+			"./images/cars/toyota-hiace.jpg",
+		],
 		Make: {
 			Engine: "3500",
 			InteriorColor: "Gray",
@@ -56,7 +68,13 @@ export const vehicles = [
 		PricePerMothWithDriver: "$3,400",
 		PriceMonthsContract: "$5,000",
 		ComesWith: [],
-		Images: ["./images/cars/tourist-van-1.jpg"],
+		Images: [
+			"./images/cars/tourist-van-1.jpg",
+			"./images/cars/tourist-van-1.jpg",
+			"./images/cars/tourist-van-1.jpg",
+			"./images/cars/tourist-van-1.jpg",
+			"./images/cars/tourist-van-1.jpg",
+		],
 		Make: {
 			Engine: "4000",
 			InteriorColor: "Black",
@@ -79,7 +97,13 @@ export const vehicles = [
 		PricePerMothWithDriver: "$1,200",
 		PriceMonthsContract: "$3,200",
 		ComesWith: [],
-		Images: ["./images/cars/toyota-vanguard.jpg"],
+		Images: [
+			"./images/cars/toyota-vanguard.jpg",
+			"./images/cars/toyota-vanguard.jpg",
+			"./images/cars/toyota-vanguard.jpg",
+			"./images/cars/toyota-vanguard.jpg",
+			"./images/cars/toyota-vanguard.jpg",
+		],
 		Make: {
 			Engine: "4000",
 			InteriorColor: "Black",
@@ -102,7 +126,13 @@ export const vehicles = [
 		PricePerMothWithDriver: "$3,400",
 		PriceMonthsContract: "$5,000",
 		ComesWith: [],
-		Images: ["./images/cars/toyota-noah.jpg"],
+		Images: [
+			"./images/cars/toyota-noah.jpg",
+			"./images/cars/toyota-noah.jpg",
+			"./images/cars/toyota-noah.jpg",
+			"./images/cars/toyota-noah.jpg",
+			"./images/cars/toyota-noah.jpg",
+		],
 		Make: {
 			Engine: "4000",
 			InteriorColor: "Black",
@@ -125,7 +155,16 @@ export const vehicles = [
 		PricePerMothWithDriver: "$3,200",
 		PriceMonthsContract: "$4,500",
 		ComesWith: [],
-		Images: ["./images/cars/toyota-land-cruiser.jpg"],
+		Images: [
+			"./images/cars/toyota-land-cruiser.jpg",
+			"./images/cars/toyota-land-cruiser.jpg",
+			"./images/cars/toyota-land-cruiser.jpg",
+			"./images/cars/toyota-land-cruiser.jpg",
+			"./images/cars/toyota-land-cruiser.jpg",
+			"./images/cars/toyota-land-cruiser.jpg",
+			"./images/cars/toyota-land-cruiser.jpg",
+			"./images/cars/toyota-land-cruiser.jpg",
+		],
 		Make: {
 			Engine: "3000",
 			InteriorColor: "Black",
