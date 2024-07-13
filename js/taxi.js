@@ -1,5 +1,5 @@
 import { initMap, calculateRoute } from "./taxi-maps.js";
-import { vehicles } from "./data/vehicle.js";
+import { vehicles, GetVehicle } from "./data/vehicle.js";
 import { submitForm, getFromLocalStorage } from "./taxi-form.js";
 
 const today = new Date().toISOString().split("T")[0];
@@ -909,6 +909,8 @@ function showBookSummary() {
 		// 	},
 		// 	body: JSON.stringify(savedData),
 		// };
+		const vehicleSelected = GetVehicle(savedData.taxiSelected);
+		savedData.taxiSelected = vehicleSelected.Name;
 		fetch(`../php/email.php?form=taxi`, {
 			method: "POST",
 			headers: {
@@ -919,11 +921,10 @@ function showBookSummary() {
 			.then((response) => response.text())
 			.then((data) => {
 				console.log(data);
-				document.querySelector(`#${formName}-form`).reset();
+				// document.querySelector(`#${formName}-form`).reset();
 				alert("Form Submitted Successfully");
 			})
 			.catch((error) => {
-				console.log(error);
 				alert("Form submission error: " + error);
 			});
 		// fetch("/contact-form/taxi", body)
@@ -990,7 +991,6 @@ async function mapInit() {
 		zoom: 13,
 	});
 
-	console.log(map);
 	// let directionsService = new google.maps.DirectionsService();
 	let directionsRenderer = new google.maps.DirectionsRenderer();
 	directionsRenderer.setMap(map);

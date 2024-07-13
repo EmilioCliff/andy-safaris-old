@@ -89,7 +89,7 @@
                 <p>Dear ' . htmlspecialchars($data["firstName"]) . ' ' . htmlspecialchars($data["lastName"]) . ',</p>
                 <p>Thank you for booking your dream car with us. Here are the details of your booking:</p>
                 <ul>
-                <li><strong>Car Name:</strong> ' . htmlspecialchars($data["carName"]) . '</li>
+                    <li><strong>Car Name:</strong> ' . htmlspecialchars($data["carName"]) . '</li>
                     <li><strong>Email:</strong> ' . htmlspecialchars($data["email"]) . '</li>
                     <li><strong>Phone Number:</strong> ' . htmlspecialchars($data["phoneNumber"]) . '</li>
                     <li><strong>Duration:</strong> ' . htmlspecialchars($data["duration"]) . '</li>
@@ -104,6 +104,17 @@
             case "taxi":
                 $subject = 'Get A Taxi Booking Confirmation';
                 $additionalMessage = trimTabs($data["contactDetails"]["comments"]);
+                switch ($data["contactDetails"]["paymentMethod"]) {
+                    case "0":
+                        $payment = "Card";
+                        break;
+                    case "1":
+                        $payment = "Cash";
+                        break;
+                    case "2":
+                        $payment = "M-PESA";
+                        break;
+                }
 
                 $message = '
                 <h2>Taxi Booking Confirmation</h2>
@@ -119,7 +130,7 @@
                     <li><strong>Transfer Type:</strong> ' . htmlspecialchars($data["rideDetails"]["transferType"]) . '</li>
                     <li><strong>Total Distance:</strong> ' . htmlspecialchars($data["rideDetails"]["totalDistance"]) . '</li>
                     <li><strong>Total Time:</strong> ' . htmlspecialchars($data["rideDetails"]["totalTime"]) . '</li>
-                    <li><strong>Payment Method:</strong> ' . htmlspecialchars($data["contactDetails"]["paymentMethod"]) . '</li>
+                    <li><strong>Payment Method:</strong> ' . htmlspecialchars($payment) . '</li>
                     <li><strong>Additional Message:</strong> ' . htmlspecialchars($additionalMessage) . '</li>
                 </ul>
                 <p>We look forward to providing you with an unforgettable experience.</p>

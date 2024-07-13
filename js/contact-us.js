@@ -8,7 +8,7 @@ import {
 	validateEnquiryForm,
 	validateReviewForm,
 } from "./taxi-form.js";
-import { GetSafari } from "./data/safari.js";
+import { GetSafari, safaris } from "./data/safari.js";
 import { GetVehicle } from "./data/vehicle.js";
 
 let formContainer = document.querySelector(".js-form-container");
@@ -130,7 +130,6 @@ function sendContactForm(entries, formName) {
 			alert("Form Submitted Successfully");
 		})
 		.catch((error) => {
-			console.log(error);
 			alert("Form submission error: " + error);
 		});
 
