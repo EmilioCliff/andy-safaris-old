@@ -32,7 +32,7 @@
         if (mail($to, $subject, $message, $headers)) {
             echo json_encode(["reached" => "i was reached", "receivedData" => $data]);
         } else {
-            echo json_encode(["error" => "Failed to send email"]);
+            echo json_encode(["error" => "Failed to send email", "email-message" => $message]);
         }
     } else {
         echo json_encode(["error" => "No data received"]);
