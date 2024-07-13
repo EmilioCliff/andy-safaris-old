@@ -97,6 +97,7 @@ const form = urlParams.get("form");
 initContact(form);
 
 function sendContactForm(entries, formName) {
+	// sets the safari enquiry if the form submitted is an enquery form
 	if (entries.serviceEnguery) {
 		switch (entries.serviceEnguery) {
 			case "0":
@@ -113,14 +114,6 @@ function sendContactForm(entries, formName) {
 				break;
 		}
 	}
-
-	// const body = {
-	// 	method: "POST",
-	// 	headers: {
-	// 		"Content-Type": "application/json; charset=utf-8",
-	// 	},
-	// 	body: JSON.stringify(entries),
-	// };
 
 	fetch("../php/email.php", {
 		method: "POST",
