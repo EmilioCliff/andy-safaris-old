@@ -125,18 +125,16 @@ function sendContactForm(entries, formName) {
 		.then((response) => response.text())
 		.then((data) => {
 			console.log(data);
-			// document.querySelector(`#${formName}-form`).reset();
-			// alert("Form Submitted Successfully");
+			document.querySelector(`#${formName}-form`).reset();
+			alert("Form Submitted Successfully");
 		})
 		.catch((error) => {
 			console.log(error);
-			// alert("Form submission error: " + error);
+			alert("Form submission error: " + error);
 		});
 
 	// 	fetch(
 	// 		"../php/email.php",
-	// 		// `https://hidden-hamlet-26063-b81107f3765e.herokuapp.com/contact-form/${formName}`,
-	// 		// `0.0.0.0:8080/contact-form/${formName}`,
 	// 		body
 	// 	)
 	// 		.then((response) => response.text())
