@@ -1,0 +1,68 @@
+.booking-container-choose-vehicle {
+	grid-template-columns: 1fr;
+}
+
+.review-container {
+	width: 100%;
+}
+
+.ride-details-form .review-stars svg {
+	width: 1.5rem;
+	margin-top: 1rem;
+	cursor: pointer;
+	margin-right: 0.5rem;
+}
+
+.review-list-cont hr {
+	margin-block: 0.8rem;
+	opacity: 0.6;
+}
+
+.star-checked {
+	fill: var(--first-color);
+}
+
+.review-box {
+	display: flex;
+	column-gap: 1rem;
+}
+
+.review-profile {
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #b6abab;
+	color: var(--title-color);
+	font-size: var(--h1-font-size);
+	font-weight: var(--font-semi-bold);
+}
+
+.review-dates {
+	margin-top: 0.5rem;
+	font-size: var(--small-font-size);
+	font-weight: var(--font-semi-bold);
+	opacity: 0.5;
+	font-family: var(--secondary-style);
+}
+
+.review-name {
+	display: flex;
+	align-items: center;
+	column-gap: 0.5rem;
+}
+
+.review-name p {
+	font-weight: var(--font-semi-bold);
+}
+
+.review-stars {
+	display: flex;
+	align-items: center;
+}
+
+.review-stars svg {
+	width: 1rem;
+}

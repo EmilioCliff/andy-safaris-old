@@ -1442,6 +1442,18 @@ table {
 		grid-template-columns: 1fr 1fr;
 		margin-bottom: 2rem;
 	}
+
+	.gallery-pic-cont {
+		display: grid;
+		padding-inline: 3rem;
+		gap: 0.5rem;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	/* .gallery-container {
+		width: 100%;
+		padding-inline: 3rem;
+	} */
 }
 
 @media screen and (min-width: 950px) {
@@ -2173,4 +2185,16 @@ table {
 		grid-template-columns: 1fr 1fr;
 		margin-bottom: 2rem;
 	}
+
+	.gallery-pic-cont {
+		display: grid;
+		padding-inline: 3rem;
+		gap: 0.5rem;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	/* .gallery-container {
+		width: 100%;
+		padding-inline: 3rem;
+	} */
 }

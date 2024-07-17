@@ -923,6 +923,7 @@ function showBookSummary() {
 				console.log(data);
 				// document.querySelector(`#${formName}-form`).reset();
 				alert("Form Submitted Successfully");
+				// window.location.href = "./taxi.html";
 			})
 			.catch((error) => {
 				alert("Form submission error: " + error);

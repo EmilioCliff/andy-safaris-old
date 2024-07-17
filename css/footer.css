@@ -57,7 +57,6 @@
 .footer-about-us {
 	font-size: var(--small-font-size);
 	color: var(--body-color);
-	opacity: 0.4;
 	width: 80%;
 	margin-bottom: 0.8rem;
 }
@@ -89,7 +88,6 @@
 .footer-address {
 	font-size: var(--small-font-size);
 	color: var(--body-color);
-	opacity: 0.4;
 	margin-bottom: 1.4rem;
 }
 

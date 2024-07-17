@@ -79,17 +79,17 @@ function initContact(form) {
 				}
 			});
 
-		document.getElementById("review-btn").addEventListener("click", () => {
-			const entries = collectReviewValues();
-			const errors = validateReviewForm(entries);
-			displayReviewFormErrors(errors);
+		// document.getElementById("review-btn").addEventListener("click", () => {
+		// 	const entries = collectReviewValues();
+		// 	const errors = validateReviewForm(entries);
+		// 	displayReviewFormErrors(errors);
 
-			// send post request to my backend
-			if (errors.length === 0) {
-				sendContactForm(entries, "review");
-				return;
-			}
-		});
+		// 	// send post request to my backend
+		// 	if (errors.length === 0) {
+		// 		sendContactForm(entries, "review");
+		// 		return;
+		// 	}
+		// });
 	}
 }
 
@@ -132,38 +132,6 @@ function sendContactForm(entries, formName) {
 		.catch((error) => {
 			alert("Form submission error: " + error);
 		});
-
-	// 	fetch(
-	// 		"../php/email.php",
-	// 		body
-	// 	)
-	// 		.then((response) => response.text())
-	// 		// .then((response) => {
-	// 		// 	// if (!response.ok) {
-	// 		// 	// 	response.json().then((errorData) => {
-	// 		// 	// 		alert("Form submission error: " + errorData);
-	// 		// 	// 		// setInfoMessage([false, `Failed Submitting form: ${errorData}`]);
-	// 		// 	// 		return;
-	// 		// 	// 	});
-	// 		// 	// }
-	// 		// 	return response.json();
-	// 		// })
-	// 		.then((data) => {
-	// 			// if (formName === "review") {
-	// 			// 	setInfoMessage([true, `Submitted successful`], true);
-	// 			// } else {
-	// 			// 	setInfoMessage([true, `Submitted successful`]);
-	// 			// }
-	// 			alert("Form Submitted Successful");
-	// 			console.log(data);
-
-	// 			document.querySelector(`#${formName}-form`).reset();
-	// 			// window.location.href = `/${formName}`;
-	// 		})
-	// 		.catch((error) => {
-	// 			alert("Form submission error: " + error);
-	// 			// setInfoMessage([false, `Error submitting form: ${error}`]);
-	// 		});
 }
 
 function setInfoMessage(status, review) {
@@ -201,7 +169,7 @@ function showEnquiryForm() {
 				style="width: 3rem; margin: 0 auto"
 				alt=""
 			/>
-			<div class="section-subtitle">Inquiry Contact Form</div>
+			<div class="section-subtitle">Enquiry Contact Form</div>
 			<div
 				class="section-title"
 				style="font-size: var(--large-font-size); margin-bottom: 0"
@@ -323,7 +291,7 @@ function showEnquiryForm() {
 								</svg>
 							</div>
 							<p>Email Address</p>
-							<p>andysafariskenya@gmail.com</p>
+							<p>info@andysafaris.com</p>
 						</div>
 						<div class="enquery-socials">
 							<div class="enquiry-social-icon">
@@ -337,8 +305,8 @@ function showEnquiryForm() {
 									></path>
 								</svg>
 							</div>
-							<p>Office Location</p>
-							<p>P.O Box 0000 - 0000</p>
+							<p>Address</p>
+							<p>P.O Box 8873 - 00100</p>
 							<p>Nairobi Kenya</p>
 						</div>
 						<div class="enquery-socials">
@@ -364,57 +332,7 @@ function showEnquiryForm() {
 					</div>
 				</div>
 			</div>
-			<div class="review-container">
-				<p class="progress-title">LEAVE A REVIEW</p>
-				<form
-					action=""
-					class="ride-details-form review-cont"
-					id="review-form"
-					autocomplete="off"
-				>
-					<div class="date-input-container">
-						<label for="fullName">FULL NAME</label>
-						<input
-							type="text"
-							name="fullName"
-							id="fullName"
-							placeholder="Enter First Name"
-						/>
-						<div class="error-message">
-							<p></p>
-						</div>
-					</div>
-					<div class="date-input-container">
-						<label for="email">EMAIL NAME</label>
-						<input
-							type="email"
-							name="email"
-							id="email"
-							placeholder="example@gmail.com"
-						/>
-						<div class="error-message">
-							<p></p>
-						</div>
-					</div>
-					<div class="date-input-container">
-						<label for="review">REVIEW</label>
-						<textarea name="review" id="review"> </textarea>
-						<div class="error-message">
-							<p></p>
-						</div>
-					</div>
-				</form>
-				<div
-					class="taxi-next-btn taxi-btn taxi-btn-right"
-					style="margin-top: 1rem; margin-inline: auto"
-					id="review-btn"
-				>
-				<div class="form-done">
-										<p class="error-info"></p>
-									</div>
-					LEAVE A REVIEW
-				</div>
-			</div>
+			
 		</section>
 	`;
 }

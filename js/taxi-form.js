@@ -136,7 +136,7 @@ function validateContactDetailsForm(values) {
 		errors[2] = "valid email is required";
 	}
 
-	if (!values.phoneNumber || !/^\d{10}$/.test(values.phoneNumber)) {
+	if (!values.phoneNumber || !/^\d{10,}$/.test(values.phoneNumber)) {
 		errors[3] = "phone-number is required";
 	}
 
@@ -159,7 +159,7 @@ export function validateNairobiTourFormV(values) {
 		errors[2] = "valid email is required";
 	}
 
-	if (!values.phoneNumber || !/^\d{10}$/.test(values.phoneNumber)) {
+	if (!values.phoneNumber || !/^\d{10,}$/.test(values.phoneNumber)) {
 		errors[3] = "phone-number is required";
 	}
 
@@ -192,7 +192,7 @@ export function validateCarHireForm(values) {
 		errors[2] = "valid email is required";
 	}
 
-	if (!values.phoneNumber || !/^\d{10}$/.test(values.phoneNumber)) {
+	if (!values.phoneNumber || !/^\d{10,}$/.test(values.phoneNumber)) {
 		errors[3] = "phone-number is required";
 	}
 
@@ -225,7 +225,7 @@ export function validateEnquiryForm(values) {
 		errors[1] = "valid email is required";
 	}
 
-	if (!values.phoneNumber || !/^\d{10}$/.test(values.phoneNumber)) {
+	if (!values.phoneNumber || !/^\d{10,}$/.test(values.phoneNumber)) {
 		errors[2] = "phone-number is required";
 	}
 
